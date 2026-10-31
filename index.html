@@ -117,11 +117,7 @@ section{padding:105px 0;position:relative}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:850px){
-.navlinks{gap:14px}
-.experience-grid{grid-template-columns:repeat(2,1fr)}
-.info-grid{grid-template-columns:repeat(2,1fr)}
-}
+@media(max-width:850px){.navlinks{gap:14px}.experience-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){
 .wrap{width:min(var(--max),calc(100% - 30px))}
 .nav{height:64px}
@@ -151,11 +147,7 @@ section{padding:75px 0}
 .wa-list{grid-template-columns:1fr}
 .section-title{letter-spacing:.05em}
 }
-@media(max-width:380px){
-.info-grid{grid-template-columns:1fr}
-.hero-title .room{font-size:48px}
-.hero-title .pent{font-size:23px}
-}
+@media(max-width:380px){.info-grid{grid-template-columns:1fr}.hero-title .room{font-size:48px}.hero-title .pent{font-size:23px}}
 @media print{
 .topbar,.hero-actions,.scroll-cue,.panel-actions,.wa-button,.print-hide,#printBtn,.loader,.toast{display:none!important}
 body{background:#08090c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -170,192 +162,189 @@ section{padding:35px 0;break-inside:avoid}
 </head>
 <body>
 <div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-mark">ROOM 26</div>
-    <div class="loader-sub">PENT HOUSE · ABUJA · 2026</div>
-  </div>
+<div class="loader-inner">
+<div class="loader-mark">ROOM 26</div>
+<div class="loader-sub">PENT HOUSE · ABUJA · 2026</div>
+</div>
 </div>
 
 <header class="topbar">
-  <div class="wrap nav">
-    <a href="#home" class="brand">ROOM <span>26</span> PENT HOUSE</a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#experience">Experience</a>
-      <a href="#details">Details</a>
-      <a href="#admission">Admission</a>
-      <a href="#connect">Join Group</a>
-    </nav>
-    <a class="nav-cta" href="#invite">Get Invitation</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-  </div>
+<div class="wrap nav">
+<a href="#home" class="brand">ROOM <span>26</span> PENT HOUSE</a>
+<nav class="navlinks" id="navlinks">
+<a href="#experience">Experience</a>
+<a href="#details">Details</a>
+<a href="#admission">Admission</a>
+<a href="#connect">Join Group</a>
+</nav>
+<a class="nav-cta" href="#invite">Get Invitation</a>
+<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+</div>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="hero-art"><div class="halo"></div><div class="beam"></div><div class="beam b2"></div></div>
-  <div class="wrap hero-content">
-    <div class="eyebrow">ABUJA · DECEMBER 2026 · STRICTLY 18+</div>
-    <h1 class="hero-title"><span class="room">ROOM 26</span><span class="pent">PENT HOUSE</span></h1>
-    <div class="hero-rule"></div>
-    <div class="hero-sub">ONE CITY. MULTIPLE APARTMENTS. ONE BIG CELEBRATION.</div>
-    <div class="hostline">PRESENTED BY</div>
-    <h2 class="royal">DEEDEE</h2>
-    <p class="intro">An end-of-year gathering bringing people together for food, drinks, games, entertainment, networking and unforgettable moments across Abuja. One night, multiple apartments, one big celebration — until daybreak.</p>
-    <div class="hero-actions">
-      <a href="#invite" class="btn">Create Your Invitation</a>
-      <a href="#admission" class="btn secondary">View Admission</a>
-    </div>
-    <div class="scroll-cue">SCROLL TO EXPLORE</div>
-  </div>
+<div class="hero-art"><div class="halo"></div><div class="beam"></div><div class="beam b2"></div></div>
+<div class="wrap hero-content">
+<div class="eyebrow">ABUJA · DECEMBER 2026 · STRICTLY 18+</div>
+<h1 class="hero-title"><span class="room">ROOM 26</span><span class="pent">PENT HOUSE</span></h1>
+<div class="hero-rule"></div>
+<div class="hero-sub">ONE CITY. MULTIPLE APARTMENTS. ONE BIG CELEBRATION.</div>
+<div class="hostline">PRESENTED BY</div>
+<h2 class="royal">DEEDEE</h2>
+<p class="intro">An end-of-year gathering bringing people together for food, drinks, games, entertainment, networking and unforgettable moments across Abuja. One night, multiple apartments, one big celebration — until daybreak.</p>
+<div class="hero-actions">
+<a href="#invite" class="btn">Create Your Invitation</a>
+<a href="#admission" class="btn secondary">View Admission</a>
+</div>
+<div class="scroll-cue">SCROLL TO EXPLORE</div>
+</div>
 </section>
 
 <section id="invite">
-  <div class="wrap">
-    <div class="section-kicker reveal">A personal invitation</div>
-    <h2 class="section-title reveal">Your name. Your invitation.</h2>
-    <p class="section-desc reveal">Create a personalised invitation to share with friends and guests.</p>
-    <div class="invite-panel glass reveal">
-      <label class="field-label" for="guestName">ENTER GUEST NAME</label>
-      <input class="guest-input" id="guestName" type="text" maxlength="70" placeholder="Enter a guest's name">
-      <div class="guest-preview"><small>PREPARED FOR</small><strong id="guestPreview">OUR ESTEEMED GUEST</strong></div>
-      <div class="panel-actions">
-        <button class="btn" id="copyBtn">Copy Invitation</button>
-        <button class="btn secondary" id="shareBtn">Share Invitation</button>
-      </div>
-      <p class="note">Add a name, then copy or share the personalised invitation.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-kicker reveal">A personal invitation</div>
+<h2 class="section-title reveal">Your name. Your invitation.</h2>
+<p class="section-desc reveal">Create a personalised invitation to share with friends and guests.</p>
+<div class="invite-panel glass reveal">
+<label class="field-label" for="guestName">ENTER GUEST NAME</label>
+<input class="guest-input" id="guestName" type="text" maxlength="70" placeholder="Enter a guest's name">
+<div class="guest-preview"><small>PREPARED FOR</small><strong id="guestPreview">OUR ESTEEMED GUEST</strong></div>
+<div class="panel-actions">
+<button class="btn" id="copyBtn">Copy Invitation</button>
+<button class="btn secondary" id="shareBtn">Share Invitation</button>
+</div>
+<p class="note">Add a name, then copy or share the personalised invitation.</p>
+</div>
+</div>
 </section>
 
 <section class="city-banner">
-  <div class="wrap">
-    <h2 class="city-title">ONE CITY. <span>MULTIPLE APARTMENTS.</span><br>ONE BIG CELEBRATION.</h2>
-    <p class="city-copy">Abuja comes together for a December end-of-year celebration. Different apartments, one shared experience, great company and a night that runs until daybreak.</p>
-    <div class="city-stats">
-      <div class="stat"><b>DEC 2026</b><span>Event month</span></div>
-      <div class="stat"><b>ABUJA</b><span>FCT, Nigeria</span></div>
-      <div class="stat"><b>18+</b><span>Adults only</span></div>
-    </div>
-  </div>
+<div class="wrap">
+<h2 class="city-title">ONE CITY. <span>MULTIPLE APARTMENTS.</span><br>ONE BIG CELEBRATION.</h2>
+<p class="city-copy">Abuja comes together for a December end-of-year celebration. Different apartments, one shared experience, great company and a night that runs until daybreak.</p>
+<div class="city-stats">
+<div class="stat"><b>DEC 2026</b><span>Event month</span></div>
+<div class="stat"><b>ABUJA</b><span>FCT, Nigeria</span></div>
+<div class="stat"><b>18+</b><span>Adults only</span></div>
+</div>
+</div>
 </section>
 
 <section id="experience">
-  <div class="wrap">
-    <div class="section-kicker reveal">More than a party</div>
-    <h2 class="section-title reveal">The experience</h2>
-    <p class="section-desc reveal">A planned end-of-year gathering with entertainment, connection and good company.</p>
-    <div class="experience-grid">
-      <div class="experience-card glass reveal"><div class="card-icon">✦</div><h3>Food & drinks</h3><p>Food, refreshments and dinner buffet arrangements for guests.</p></div>
-      <div class="experience-card glass reveal"><div class="card-icon">◇</div><h3>Games & entertainment</h3><p>Fun activities, games and entertainment throughout the celebration.</p></div>
-      <div class="experience-card glass reveal"><div class="card-icon">◎</div><h3>Networking</h3><p>Meet new people, connect and share business ideas and opportunities.</p></div>
-      <div class="experience-card glass reveal"><div class="card-icon">▣</div><h3>Content & memories</h3><p>Capture moments, create content and enjoy the celebration with friends.</p></div>
-      <div class="experience-card glass reveal"><div class="card-icon">⬟</div><h3>Bouncers & security</h3><p>Event security and bouncers will help manage entry and support guest safety.</p></div>
-      <div class="experience-card glass reveal"><div class="card-icon">!</div><h3>Adult event notice</h3><p>This is an adults-only event where sexual activity may occur. Participation is optional and never expected or owed. Consent must be clear and freely given. Anyone can say no or change their mind. Respect everyone's boundaries. No coercion, harassment or unwanted touching.</p></div>
-      <div class="experience-card glass reveal"><div class="card-icon">◷</div><h3>Until daybreak</h3><p>Nonstop entertainment and energy until daybreak.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-kicker reveal">More than a party</div>
+<h2 class="section-title reveal">The experience</h2>
+<p class="section-desc reveal">A planned end-of-year gathering with entertainment, connection and good company.</p>
+<div class="experience-grid">
+<div class="experience-card glass reveal"><div class="card-icon">✦</div><h3>Food & drinks</h3><p>Food, refreshments and dinner buffet arrangements for guests.</p></div>
+<div class="experience-card glass reveal"><div class="card-icon">◇</div><h3>Games & entertainment</h3><p>Fun activities, games and entertainment throughout the celebration.</p></div>
+<div class="experience-card glass reveal"><div class="card-icon">◎</div><h3>Networking</h3><p>Meet new people, connect and share business ideas and opportunities.</p></div>
+<div class="experience-card glass reveal"><div class="card-icon">▣</div><h3>Content & memories</h3><p>Capture moments, create content and enjoy the celebration with friends.</p></div>
+<div class="experience-card glass reveal"><div class="card-icon">⬟</div><h3>Bouncers & security</h3><p>Event security and bouncers will help manage entry and support guest safety.</p></div>
+<div class="experience-card glass reveal"><div class="card-icon">!</div><h3>Adult event notice</h3><p>This is an adults-only event where sexual activity may occur. Participation is optional and never expected or owed. Consent must be clear and freely given. Anyone can say no or change their mind. Respect everyone's boundaries. No coercion, harassment or unwanted touching.</p></div>
+<div class="experience-card glass reveal"><div class="card-icon">◷</div><h3>Until daybreak</h3><p>Nonstop entertainment and energy until daybreak.</p></div>
+</div>
+</div>
 </section>
 
 <section id="details">
-  <div class="wrap">
-    <div class="section-kicker reveal">The essential details</div>
-    <h2 class="section-title reveal">Event information</h2>
-    <p class="section-desc reveal">Keep the details close. Confirmed date, time and apartment locations will be shared through the official WhatsApp group.</p>
-    <div class="info-grid reveal">
-      <div class="info-item"><span>Event</span><strong>ROOM 26 PENT HOUSE</strong></div>
-      <div class="info-item"><span>Host</span><strong>DEEDEE</strong></div>
-      <div class="info-item"><span>Month</span><strong>December 2026</strong></div>
-      <div class="info-item"><span>Location</span><strong>Abuja, FCT, Nigeria</strong></div>
-      <div class="info-item"><span>Date</span><strong class="pending">To be announced</strong></div>
-      <div class="info-item"><span>Time</span><strong class="pending">To be announced</strong></div>
-      <div class="info-item"><span>Duration</span><strong>Until daybreak</strong></div>
-      <div class="info-item"><span>Age restriction</span><strong>Strictly 18+</strong></div>
-      <div class="info-item"><span>Apartment addresses</span><strong class="pending">To be announced</strong></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-kicker reveal">The essential details</div>
+<h2 class="section-title reveal">Event information</h2>
+<p class="section-desc reveal">Keep the details close. Confirmed date, time and apartment locations will be shared through the official WhatsApp group.</p>
+<div class="info-grid reveal">
+<div class="info-item"><span>Event</span><strong>ROOM 26 PENT HOUSE</strong></div>
+<div class="info-item"><span>Host</span><strong>DEEDEE</strong></div>
+<div class="info-item"><span>Month</span><strong>December 2026</strong></div>
+<div class="info-item"><span>Location</span><strong>Abuja, FCT, Nigeria</strong></div>
+<div class="info-item"><span>Date</span><strong class="pending">To be announced</strong></div>
+<div class="info-item"><span>Time</span><strong class="pending">To be announced</strong></div>
+<div class="info-item"><span>Duration</span><strong>Until daybreak</strong></div>
+<div class="info-item"><span>Age restriction</span><strong>Strictly 18+</strong></div>
+<div class="info-item"><span>Apartment addresses</span><strong class="pending">To be announced</strong></div>
+</div>
+</div>
 </section>
 
 <section id="admission">
-  <div class="wrap">
-    <div class="section-kicker reveal">Your pass to the experience</div>
-    <h2 class="section-title reveal">Admission</h2>
-    <p class="section-desc reveal">Regular and VIP admission options are available. Check the official WhatsApp group for confirmed arrangements.</p>
-    <div class="admission-grid">
-      <div class="price-card glass reveal"><div class="price-label">Regular · Boys / Men</div><div class="price">₦30,000</div><div class="price-note">REGULAR ADMISSION</div></div>
-      <div class="price-card glass reveal"><div class="price-label">Regular · Girls / Ladies</div><div class="price">₦20,000</div><div class="price-note">REGULAR ADMISSION</div></div>
-      <div class="price-card glass reveal vip-card"><div class="price-label">VIP · Boys / Men</div><div class="price">₦50,000</div><div class="price-note">VIP ADMISSION</div></div>
-      <div class="price-card glass reveal vip-card"><div class="price-label">VIP · Girls / Ladies</div><div class="price">₦30,000</div><div class="price-note">VIP ADMISSION</div></div>
-    </div>
-    <p class="note">Please join the official WhatsApp group for ticketing instructions and confirmed event arrangements.</p>
-  </div>
+<div class="wrap">
+<div class="section-kicker reveal">Your pass to the experience</div>
+<h2 class="section-title reveal">Admission</h2>
+<p class="section-desc reveal">Regular and VIP admission options are available. Check the official WhatsApp group for confirmed arrangements.</p>
+<div class="admission-grid">
+<div class="price-card glass reveal"><div class="price-label">Regular · Boys / Men</div><div class="price">₦30,000</div><div class="price-note">REGULAR ADMISSION</div></div>
+<div class="price-card glass reveal"><div class="price-label">Regular · Girls / Ladies</div><div class="price">₦20,000</div><div class="price-note">REGULAR ADMISSION</div></div>
+<div class="price-card glass reveal vip-card"><div class="price-label">VIP · Boys / Men</div><div class="price">₦50,000</div><div class="price-note">VIP ADMISSION</div></div>
+<div class="price-card glass reveal vip-card"><div class="price-label">VIP · Girls / Ladies</div><div class="price">₦30,000</div><div class="price-note">VIP ADMISSION</div></div>
+</div>
+<p class="note">Please join the official WhatsApp group for ticketing instructions and confirmed event arrangements.</p>
+</div>
 </section>
 
 <section id="qr-code">
-  <div class="wrap">
-    <div class="whatsapp glass reveal">
-      <div class="section-kicker">Scan to join</div>
-      <h2 class="section-title">ROOM 26 WHATSAPP QR</h2>
-      <p class="section-desc">Scan this code with your phone camera to open the official ROOM 26 PENT HOUSE WhatsApp group.</p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&margin=12&data=https%3A%2F%2Fchat.whatsapp.com%2FEHjA8zHRribIkr638AyN2d%3Fmode%3Dgi_t" alt="QR code for the ROOM 26 PENT HOUSE WhatsApp group" style="display:block;width:min(280px,80%);height:auto;margin:0 auto 24px;background:white;padding:12px;border-radius:8px">
-      <a class="btn wa-button" href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t" target="_blank" rel="noopener noreferrer">OPEN WHATSAPP GROUP ↗</a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="whatsapp glass reveal">
+<div class="section-kicker">Scan to join</div>
+<h2 class="section-title">ROOM 26 WHATSAPP QR</h2>
+<p class="section-desc">Scan this code with your phone camera to open the official ROOM 26 PENT HOUSE WhatsApp group.</p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&margin=12&data=https%3A%2F%2Fchat.whatsapp.com%2FEHjA8zHRribIkr638AyN2d%3Fmode%3Dgi_t" alt="QR code for the ROOM 26 PENT HOUSE WhatsApp group" style="display:block;width:min(280px,80%);height:auto;margin:0 auto 24px;background:white;padding:12px;border-radius:8px">
+<a class="btn wa-button" href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t" target="_blank" rel="noopener noreferrer">OPEN WHATSAPP GROUP ↗</a>
+</div>
+</div>
 </section>
 
 <section id="connect">
-  <div class="wrap">
-    <div class="whatsapp glass reveal">
-      <div class="wa-icon">◉</div>
-      <div class="section-kicker">Stay in the loop</div>
-      <h2 class="section-title">STAY CONNECTED —<br>DON'T MISS THE UPDATES.</h2>
-      <p class="section-desc" style="margin-bottom:0">Join the official ROOM 26 WhatsApp group to receive important announcements and the latest event information.</p>
-      <ul class="wa-list">
-        <li>Confirmed event date</li>
-        <li>Apartment locations across Abuja</li>
-        <li>Tickets and admission</li>
-        <li>Entertainment updates</li>
-        <li>Event arrangements</li>
-        <li>Other important announcements</li>
-      </ul>
-      <a class="btn wa-button" href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t" target="_blank" rel="noopener noreferrer">JOIN THE OFFICIAL ROOM 26 WHATSAPP GROUP ↗</a>
-      <p class="note">The button opens the official WhatsApp group invitation link.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="whatsapp glass reveal">
+<div class="wa-icon">◉</div>
+<div class="section-kicker">Stay in the loop</div>
+<h2 class="section-title">STAY CONNECTED —<br>DON'T MISS THE UPDATES.</h2>
+<p class="section-desc" style="margin-bottom:0">Join the official ROOM 26 WhatsApp group to receive important announcements and the latest event information.</p>
+<ul class="wa-list">
+<li>Confirmed event date</li>
+<li>Apartment locations across Abuja</li>
+<li>Tickets and admission</li>
+<li>Entertainment updates</li>
+<li>Event arrangements</li>
+<li>Other important announcements</li>
+</ul>
+<a class="btn wa-button" href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t" target="_blank" rel="noopener noreferrer">JOIN THE OFFICIAL ROOM 26 WHATSAPP GROUP ↗</a>
+<p class="note">The button opens the official WhatsApp group invitation link.</p>
+</div>
+</div>
 </section>
 </main>
 
 <footer class="footer">
-  <div class="wrap">
-    <div class="footer-brand">ROOM 26 PENT HOUSE</div>
-    <p>DECEMBER END-OF-YEAR CELEBRATION · ABUJA 2026<br>Hosted by DEEDEE</p>
-    <div class="age">STRICTLY 18+</div>
-    <p style="margin-top:22px">ONE NIGHT. ENDLESS EXPERIENCES. UNTIL DAYBREAK.</p>
-    <button class="btn secondary" id="printBtn" style="margin-top:12px">Print / Save as PDF ⤓</button>
-    <p style="margin-top:22px">© 2026 ROOM 26 PENT HOUSE. ALL RIGHTS RESERVED.</p>
-  </div>
+<div class="wrap">
+<div class="footer-brand">ROOM 26 PENT HOUSE</div>
+<p>DECEMBER END-OF-YEAR CELEBRATION · ABUJA 2026<br>Hosted by DEEDEE</p>
+<div class="age">STRICTLY 18+</div>
+<p style="margin-top:22px">ONE NIGHT. ENDLESS EXPERIENCES. UNTIL DAYBREAK.</p>
+<button class="btn secondary" id="printBtn" style="margin-top:12px">Print / Save as PDF ⤓</button>
+<p style="margin-top:22px">© 2026 ROOM 26 PENT HOUSE. ALL RIGHTS RESERVED.</p>
+</div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (() => {
-  const groupLink = 'https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t';
-  const guestInput = document.getElementById('guestName');
-  const guestPreview = document.getElementById('guestPreview');
-  const toast = document.getElementById('toast');
-  const nav = document.getElementById('navlinks');
-  let toastTimer;
+const groupLink='https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t';
+const guestInput=document.getElementById('guestName');
+const guestPreview=document.getElementById('guestPreview');
+const toast=document.getElementById('toast');
+const nav=document.getElementById('navlinks');
+let toastTimer;
 
-  const cleanName = value => value.trim().replace(/\s+/g, ' ').slice(0, 70);
-  const guestName = () => cleanName(guestInput.value) || 'OUR ESTEEMED GUEST';
+const cleanName=value=>value.trim().replace(/\s+/g,' ').slice(0,70);
+const guestName=()=>cleanName(guestInput.value)||'OUR ESTEEMED GUEST';
 
-  function invitationText() {
-    const name = guestName();
-    const greeting = name === 'OUR ESTEEMED GUEST'
-      ? 'You are specially invited'
-      : `A special invitation for ${name}`;
-
-    return `ROOM 26 PENT HOUSE
+function invitationText(){
+const name=guestName();
+const greeting=name==='OUR ESTEEMED GUEST'?'You are specially invited':`A special invitation for ${name}`;
+return `ROOM 26 PENT HOUSE
 DECEMBER END-OF-YEAR CELEBRATION — ABUJA 2026
 
 DEEDEE CORDIALLY INVITES YOU
@@ -377,7 +366,7 @@ Date: To be announced
 Time: To be announced
 Duration: Until daybreak
 Security: Bouncers and event security planned
-Adult event notice: Sexual activity may occur, but participation is optional and never expected. Consent must be clear and freely given. Anyone can say no or change their mind. Respect everyone's boundaries. No coercion, harassment or unwanted touching.
+Adult event notice: Sexual activity may occur, but participation is optional and never expected or owed. Consent must be clear and freely given. Anyone can say no or change their mind. Respect everyone's boundaries. No coercion, harassment or unwanted touching.
 Age restriction: Strictly 18+
 
 ADMISSION
@@ -387,105 +376,91 @@ VIP Boys / Men: ₦50,000
 VIP Girls / Ladies: ₦30,000
 
 Join the official WhatsApp group for updates: ${groupLink}`;
-  }
+}
 
-  function showToast(message) {
-    toast.textContent = message;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
-  }
+function showToast(message){
+toast.textContent=message;
+toast.classList.add('show');
+clearTimeout(toastTimer);
+toastTimer=setTimeout(()=>toast.classList.remove('show'),2600);
+}
 
-  guestInput.addEventListener('input', () => {
-    const name = cleanName(guestInput.value);
-    guestPreview.textContent = name ? name.toUpperCase() : 'OUR ESTEEMED GUEST';
-    const url = new URL(window.location.href);
-    if (name) url.searchParams.set('guest', name);
-    else url.searchParams.delete('guest');
-    window.history.replaceState({}, '', url.toString());
-  });
+guestInput.addEventListener('input',()=>{
+const name=cleanName(guestInput.value);
+guestPreview.textContent=name?name.toUpperCase():'OUR ESTEEMED GUEST';
+const url=new URL(window.location.href);
+if(name)url.searchParams.set('guest',name);
+else url.searchParams.delete('guest');
+window.history.replaceState({},'',url.toString());
+});
 
-  document.getElementById('copyBtn').addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(invitationText());
-      showToast('Personalised invitation copied.');
-    } catch (e) {
-      fallbackCopy(invitationText());
-    }
-  });
+function fallbackCopy(text){
+const area=document.createElement('textarea');
+area.value=text;
+area.style.position='fixed';
+area.style.opacity='0';
+document.body.appendChild(area);
+area.select();
+try{document.execCommand('copy');showToast('Invitation copied.');}
+catch(e){showToast('Copy is unavailable on this browser.');}
+area.remove();
+}
 
-  function fallbackCopy(text) {
-    const area = document.createElement('textarea');
-    area.value = text;
-    area.style.position = 'fixed';
-    area.style.opacity = '0';
-    document.body.appendChild(area);
-    area.select();
-    try {
-      document.execCommand('copy');
-      showToast('Invitation copied.');
-    } catch (e) {
-      showToast('Copy is unavailable on this browser.');
-    }
-    area.remove();
-  }
+document.getElementById('copyBtn').addEventListener('click',async()=>{
+try{
+await navigator.clipboard.writeText(invitationText());
+showToast('Personalised invitation copied.');
+}catch(e){fallbackCopy(invitationText());}
+});
 
-  document.getElementById('shareBtn').addEventListener('click', async () => {
-    const shareData = {
-      title: 'ROOM 26 PENT HOUSE — Abuja 2026',
-      text: invitationText(),
-      url: window.location.href
-    };
+document.getElementById('shareBtn').addEventListener('click',async()=>{
+const shareData={
+title:'ROOM 26 PENT HOUSE — Abuja 2026',
+text:invitationText(),
+url:window.location.href
+};
+if(navigator.share){
+try{await navigator.share(shareData);}
+catch(e){if(e.name!=='AbortError')showToast('Unable to open sharing on this device.');}
+}else{
+fallbackCopy(`${invitationText()}\n\nOpen invitation: ${window.location.href}`);
+}
+});
 
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-      } catch (e) {
-        if (e.name !== 'AbortError') showToast('Unable to open sharing on this device.');
-      }
-    } else {
-      fallbackCopy(`${invitationText()}\n\nOpen invitation: ${window.location.href}`);
-    }
-  });
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
 
-  document.getElementById('printBtn').addEventListener('click', () => window.print());
+document.getElementById('menuBtn').addEventListener('click',()=>{
+const open=nav.classList.toggle('open');
+document.getElementById('menuBtn').setAttribute('aria-expanded',String(open));
+document.getElementById('menuBtn').textContent=open?'✕':'☰';
+});
 
-  document.getElementById('menuBtn').addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    document.getElementById('menuBtn').setAttribute('aria-expanded', String(open));
-    document.getElementById('menuBtn').textContent = open ? '✕' : '☰';
-  });
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+nav.classList.remove('open');
+document.getElementById('menuBtn').setAttribute('aria-expanded','false');
+document.getElementById('menuBtn').textContent='☰';
+}));
 
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    document.getElementById('menuBtn').setAttribute('aria-expanded', 'false');
-    document.getElementById('menuBtn').textContent = '☰';
-  }));
+const params=new URLSearchParams(window.location.search);
+const incomingGuest=params.get('guest');
+if(incomingGuest){
+guestInput.value=cleanName(incomingGuest);
+guestPreview.textContent=guestInput.value.toUpperCase();
+}
 
-  const params = new URLSearchParams(window.location.search);
-  const incomingGuest = params.get('guest');
-  if (incomingGuest) {
-    guestInput.value = cleanName(incomingGuest);
-    guestPreview.textContent = guestInput.value.toUpperCase();
-  }
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+}),{threshold:.12});
 
-  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  window.addEventListener('load', () => setTimeout(() => {
-    document.getElementById('loader').classList.add('hide');
-  }, 650));
-
-  window.addEventListener('pageshow', () => setTimeout(() => {
-    document.getElementById('loader').classList.add('hide');
-  }, 650));
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('hide'),650));
+window.addEventListener('pageshow',()=>setTimeout(()=>document.getElementById('loader').classList.add('hide'),650));
 })();
 </script>
+
 </body>
 </html>
