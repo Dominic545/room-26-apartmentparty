@@ -3,361 +3,1007 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#08090c">
+<meta name="theme-color" content="#090909">
 <meta name="description" content="ROOM 26 PENT HOUSE — December 2026, Abuja. Hosted by DEEDEE.">
 <title>ROOM 26 PENT HOUSE | December 2026</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--bg:#08090c;--panel:#111318;--silver:#d9dde4;--muted:#9ba1ad;--white:#f7f8fa;--line:rgba(221,228,239,.17);--glow:rgba(196,215,244,.26);--gold:#c7bda9;--max:1160px}
+
+:root{
+  --bg:#090909;
+  --panel:#14120f;
+  --white:#f7f3eb;
+  --muted:#aaa296;
+  --gold:#d4b879;
+  --gold-light:#f0e5ca;
+  --line:rgba(213,185,129,.22);
+  --max:1160px;
+}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:82px}
-body{margin:0;background:var(--bg);color:var(--white);font-family:'Manrope',sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 50% -10%,rgba(134,155,189,.19),transparent 42%),radial-gradient(ellipse at 100% 50%,rgba(80,91,116,.11),transparent 38%),linear-gradient(145deg,#08090c,#101218 55%,#08090c)}
-body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E")}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Manrope',sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-2;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(166,128,65,.13),transparent 43%),
+    linear-gradient(155deg,#080808 0%,#11100e 52%,#080808 100%);
+}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit}
 .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
-.topbar{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(7,8,11,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.18em;font-weight:800}
-.brand span{color:#aeb8c8}
-.navlinks{display:flex;gap:27px;align-items:center;color:#c1c6d0;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+/* NAVIGATION */
+.topbar{
+  position:fixed;
+  z-index:50;
+  top:0;left:0;right:0;
+  background:rgba(7,7,7,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(213,185,129,.15);
+}
+.nav{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:13px;
+  letter-spacing:.18em;
+  font-weight:800;
+}
+.brand span{color:var(--gold)}
+.navlinks{
+  display:flex;
+  gap:27px;
+  align-items:center;
+  color:#c1b9aa;
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
 .navlinks a{transition:.25s}
-.navlinks a:hover{color:white}
-.nav-cta,.btn{border:1px solid rgba(231,237,248,.48);background:linear-gradient(135deg,#f0f2f6,#8e98a8 45%,#e5e8ed);color:#080a0e;font-weight:800;letter-spacing:.11em;text-transform:uppercase;padding:13px 19px;border-radius:3px;font-size:10px;cursor:pointer;transition:transform .25s,box-shadow .25s,filter .25s;display:inline-flex;align-items:center;justify-content:center;gap:9px}
-.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(194,211,239,.22);filter:brightness(1.08)}
-.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);padding:9px 12px;border-radius:3px}
-.hero{min-height:820px;display:flex;align-items:center;position:relative;overflow:hidden;padding:145px 0 90px}
-.hero-art{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.halo{position:absolute;width:min(76vw,850px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(222,230,245,.13);left:50%;top:48%;transform:translate(-50%,-50%);box-shadow:0 0 90px rgba(147,174,216,.08),inset 0 0 90px rgba(147,174,216,.05)}
-.halo:before,.halo:after{content:"";position:absolute;border:1px solid rgba(222,230,245,.1);border-radius:50%;inset:8%}
-.halo:after{inset:17%;border-color:rgba(222,230,245,.08)}
-.beam{position:absolute;top:-20%;left:50%;width:1px;height:140%;background:linear-gradient(transparent,rgba(212,224,246,.3),transparent);transform:rotate(28deg);filter:blur(1px)}
-.beam.b2{transform:rotate(-28deg);opacity:.5}
-.hero-content{position:relative;z-index:2;text-align:center;width:100%}
-.eyebrow{color:#c5ccd8;font-size:10px;letter-spacing:.42em;text-transform:uppercase;margin-bottom:24px}
-.hero-title{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.08em;line-height:.94;margin:0 auto;text-transform:uppercase;text-shadow:0 0 35px rgba(196,214,244,.2)}
-.hero-title .room{display:block;font-size:clamp(65px,12vw,148px);background:linear-gradient(180deg,#fff 0%,#b9c1ce 34%,#697382 51%,#f4f6fa 70%,#858f9e 100%);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 9px 22px rgba(0,0,0,.7))}
-.hero-title .pent{display:block;font-size:clamp(31px,6.2vw,72px);letter-spacing:.23em;margin-top:17px;color:#d8dde5;text-shadow:0 0 25px rgba(205,219,242,.25)}
-.hero-rule{height:1px;width:min(420px,70%);margin:31px auto;background:linear-gradient(90deg,transparent,#dce3ed,transparent)}
-.hero-sub{font-family:'Space Grotesk',sans-serif;font-size:clamp(10px,1.5vw,13px);letter-spacing:.28em;color:#d5dbe5}
-.hostline{margin:44px 0 14px;color:#aeb7c6;font-size:10px;letter-spacing:.35em;text-transform:uppercase}
-.royal{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,37px);font-weight:500;margin:0 0 18px}
-.intro{max-width:700px;margin:0 auto;color:#b7bdc8;line-height:1.9;font-size:14px}
-.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}
-.btn.secondary{background:rgba(255,255,255,.035);color:#edf1f7;border-color:rgba(226,233,245,.35);backdrop-filter:blur(12px)}
-.scroll-cue{margin-top:65px;color:#858d9b;font-size:9px;letter-spacing:.32em;text-transform:uppercase}
-.scroll-cue:after{content:"";display:block;width:1px;height:37px;background:linear-gradient(#dce3ed,transparent);margin:14px auto 0}
-section{padding:105px 0;position:relative}
-.section-kicker{text-align:center;color:#9ea8b7;font-size:10px;letter-spacing:.38em;text-transform:uppercase;margin-bottom:16px}
-.section-title{text-align:center;font-family:'Space Grotesk',sans-serif;font-size:clamp(25px,4.5vw,43px);letter-spacing:.09em;margin:0 0 18px;text-transform:uppercase}
-.section-desc{text-align:center;max-width:650px;margin:0 auto 45px;color:#aeb5c1;line-height:1.8;font-size:13px}
-.glass{background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.018));border:1px solid var(--line);box-shadow:0 25px 80px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.07);backdrop-filter:blur(18px)}
-.invite-panel{max-width:760px;margin:auto;padding:36px;border-radius:7px}
-.field-label{display:block;color:#aeb7c6;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:11px}
-.guest-input{width:100%;background:rgba(0,0,0,.32);border:1px solid rgba(218,227,241,.27);padding:17px 16px;color:white;border-radius:3px;outline:none;transition:.25s}
-.guest-input:focus{border-color:#dce4f1;box-shadow:0 0 0 3px rgba(200,218,245,.08)}
-.guest-preview{margin:25px 0;padding:25px 15px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.guest-preview small{display:block;color:#aeb7c6;font-size:9px;letter-spacing:.32em;margin-bottom:12px}
-.guest-preview strong{font-family:'Space Grotesk',sans-serif;font-size:clamp(18px,4vw,29px);letter-spacing:.1em;overflow-wrap:anywhere}
-.panel-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.navlinks a:hover{color:var(--gold)}
+.nav-cta,.btn{
+  border:1px solid #e3cc9b;
+  background:linear-gradient(135deg,#f0e5ca 0%,#d1b77f 52%,#ad8b50 100%);
+  color:#17130c;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:14px 20px;
+  border-radius:3px;
+  font-size:10px;
+  cursor:pointer;
+  transition:transform .25s,box-shadow .25s,filter .25s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+}
+.nav-cta:hover,.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(172,133,67,.2);
+  filter:brightness(1.08);
+}
+.btn.secondary{
+  background:rgba(255,255,255,.025);
+  border-color:rgba(214,185,128,.52);
+  color:#eadfc9;
+  box-shadow:none;
+}
+.menu-btn{
+  display:none;
+  background:none;
+  color:white;
+  border:1px solid var(--line);
+  padding:9px 12px;
+  border-radius:3px;
+}
+
+/* HERO */
+.hero{
+  min-height:690px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:125px 0 76px;
+  background:radial-gradient(ellipse at 50% 10%,rgba(192,155,91,.11),transparent 48%);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  width:100%;
+  max-width:960px;
+  margin:auto;
+}
+.eyebrow{
+  color:#c9ad78;
+  font-size:10px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+.hero-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  letter-spacing:.08em;
+  line-height:.94;
+  margin:0 auto;
+  text-transform:uppercase;
+}
+.hero-title .room{
+  display:block;
+  font-size:clamp(65px,12vw,148px);
+  background:linear-gradient(180deg,#fffdf8 0%,#e7dcc4 48%,#b99b63 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero-title .pent{
+  display:block;
+  font-size:clamp(31px,6.2vw,72px);
+  letter-spacing:.19em;
+  margin-top:17px;
+  color:#e2d2ad;
+}
+.hero-sub{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(10px,1.5vw,13px);
+  letter-spacing:.19em;
+  color:#c9ad78;
+  margin-top:22px;
+}
+.hostline{
+  margin:34px 0 12px;
+  color:#b6a47f;
+  font-size:10px;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+}
+.royal{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(24px,4vw,37px);
+  font-weight:500;
+  margin:0 0 15px;
+}
+.intro{
+  max-width:640px;
+  margin:0 auto;
+  color:#c1baad;
+  line-height:1.8;
+  font-size:14px;
+}
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:27px;
+}
+
+/* GENERAL SECTIONS */
+section{padding:82px 0;position:relative}
+.section-kicker{
+  text-align:center;
+  color:#c9ad78;
+  font-size:10px;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.section-title{
+  text-align:center;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(25px,4.5vw,43px);
+  letter-spacing:.055em;
+  margin:0 0 18px;
+  text-transform:uppercase;
+  color:#f2eadc;
+}
+.section-desc{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 34px;
+  color:#c1baad;
+  line-height:1.8;
+  font-size:13px;
+}
+.glass{
+  background:linear-gradient(145deg,rgba(28,25,20,.96),rgba(15,15,14,.98));
+  border:1px solid var(--line);
+  box-shadow:0 18px 48px rgba(0,0,0,.28);
+}
+
+/* PERSONAL INVITATION */
+.invite-panel{
+  max-width:700px;
+  margin:auto;
+  padding:30px;
+  border-radius:8px;
+}
+.field-label{
+  display:block;
+  color:#c9ad78;
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:11px;
+}
+.guest-input{
+  width:100%;
+  background:#090a0d;
+  border:1px solid rgba(205,185,143,.28);
+  padding:17px 16px;
+  color:white;
+  border-radius:5px;
+  outline:none;
+  transition:.25s;
+}
+.guest-input:focus{
+  border-color:#d4b879;
+  box-shadow:0 0 0 3px rgba(200,170,110,.09);
+}
+.guest-preview{
+  margin:25px 0;
+  padding:25px 15px;
+  text-align:center;
+  border-top:1px solid rgba(210,180,120,.22);
+  border-bottom:1px solid rgba(210,180,120,.22);
+}
+.guest-preview small{
+  display:block;
+  color:#c9ad78;
+  font-size:9px;
+  letter-spacing:.32em;
+  margin-bottom:12px;
+}
+.guest-preview strong{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(18px,4vw,29px);
+  letter-spacing:.1em;
+  overflow-wrap:anywhere;
+}
+.panel-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 .panel-actions .btn{flex:1;min-width:180px}
-.note{font-size:11px;color:#818b9a;text-align:center;margin:18px 0 0;line-height:1.7}
-.city-banner{padding:85px 0;background:linear-gradient(90deg,transparent,rgba(181,199,229,.075),transparent);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
-.city-title{font-family:'Space Grotesk',sans-serif;text-align:center;font-size:clamp(23px,4.3vw,45px);line-height:1.35;letter-spacing:.07em;margin:0 auto 19px;max-width:900px}
-.city-title span{color:#aeb9ca}
-.city-copy{max-width:720px;margin:auto;text-align:center;color:#b2bac7;line-height:1.9;font-size:14px}
-.city-stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:760px;margin:45px auto 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.note{
+  font-size:11px;
+  color:#aaa296;
+  text-align:center;
+  margin:18px 0 0;
+  line-height:1.7;
+}
+
+/* CITY BANNER */
+.city-banner{
+  padding:85px 0;
+  background:linear-gradient(90deg,transparent,rgba(174,137,76,.075),transparent);
+  border-top:1px solid rgba(210,180,120,.18);
+  border-bottom:1px solid rgba(210,180,120,.18);
+}
+.city-title{
+  font-family:'Space Grotesk',sans-serif;
+  text-align:center;
+  font-size:clamp(23px,4.3vw,45px);
+  line-height:1.35;
+  letter-spacing:.07em;
+  margin:0 auto 19px;
+  max-width:900px;
+}
+.city-title span{color:#d9c18f}
+.city-copy{
+  max-width:720px;
+  margin:auto;
+  text-align:center;
+  color:#c1baad;
+  line-height:1.9;
+  font-size:14px;
+}
+.city-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  max-width:760px;
+  margin:45px auto 0;
+  border-top:1px solid rgba(210,180,120,.2);
+  border-bottom:1px solid rgba(210,180,120,.2);
+}
 .stat{text-align:center;padding:22px 12px}
-.stat+.stat{border-left:1px solid var(--line)}
-.stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:20px;letter-spacing:.08em}
-.stat span{display:block;margin-top:8px;font-size:9px;letter-spacing:.2em;color:#929cab;text-transform:uppercase}
-.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.experience-card{min-height:160px;padding:24px;border-radius:5px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
-.experience-card:hover{transform:translateY(-6px);border-color:rgba(225,234,248,.45)}
-.experience-card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-60px;bottom:-75px;border:1px solid rgba(218,228,244,.12);box-shadow:0 0 30px rgba(200,220,248,.07)}
-.card-icon{font-size:21px;color:#d6dce7;margin-bottom:17px}
-.experience-card h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 9px}
-.experience-card p{font-size:11px;color:#9da6b4;line-height:1.7;margin:0;max-width:260px}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.info-item{padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:4px}
-.info-item span{display:block;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#8f99a8;margin-bottom:10px}
-.info-item strong{font-size:14px;letter-spacing:.04em}
-.info-item .pending{color:#d0d6e0;font-weight:500}
-.admission-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:800px;margin:auto}
-.price-card{padding:35px 28px;text-align:center;border-radius:6px;position:relative;overflow:hidden}
-.price-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.09),transparent 50%);pointer-events:none}
-.price-card>*{position:relative}
-.price-label{font-size:10px;letter-spacing:.3em;color:#b4bdca;text-transform:uppercase}
-.price{font-family:'Space Grotesk',sans-serif;font-size:clamp(29px,5vw,47px);font-weight:800;letter-spacing:-.04em;margin:21px 0 10px;background:linear-gradient(180deg,#fff,#9ca8b9);background-clip:text;-webkit-background-clip:text;color:transparent}
-.price-note{color:#8f99a8;font-size:10px;letter-spacing:.12em}
-.vip-card{border-color:rgba(211,174,103,.58);background:linear-gradient(145deg,rgba(180,139,66,.16),rgba(255,255,255,.018));box-shadow:0 18px 55px rgba(0,0,0,.28),inset 0 1px rgba(255,225,170,.12)}
-.vip-card:before{background:linear-gradient(135deg,rgba(232,194,123,.18),transparent 52%)}
-.vip-card .price-label{color:#e4c98e}
-.vip-card .price{background:linear-gradient(180deg,#fff3cf,#d8b56d 55%,#9c7739);background-clip:text;-webkit-background-clip:text;color:transparent}
-.vip-card .price-note{color:#d4b879}
-.whatsapp{max-width:850px;margin:auto;padding:48px 38px;text-align:center;border-radius:7px;position:relative;overflow:hidden}
-.whatsapp:before{content:"";position:absolute;inset:-80%;background:conic-gradient(from 0deg,transparent,rgba(192,213,245,.1),transparent 25%);animation:spin 18s linear infinite}
-.whatsapp>*{position:relative}
-.wa-icon{width:58px;height:58px;margin:0 auto 22px;border:1px solid rgba(221,231,246,.4);border-radius:50%;display:grid;place-items:center;font-size:25px;color:#e9edf4;box-shadow:0 0 28px rgba(193,218,250,.12)}
-.wa-list{list-style:none;padding:0;margin:25px auto 32px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:590px;text-align:left}
-.wa-list li{color:#b4bdca;font-size:12px}
-.wa-list li:before{content:"✦";color:#dfe5ee;margin-right:10px}
-.wa-button{background:linear-gradient(135deg,#f4f6f9,#aab5c5 50%,#e7ebf1);padding:18px 25px;font-size:11px;max-width:100%;box-shadow:0 0 35px rgba(192,213,245,.13)}
-.footer{padding:40px 0 32px;text-align:center;border-top:1px solid var(--line);color:#7f8998}
-.footer-brand{font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:.2em;color:#d9dfe9}
-.age{display:inline-block;border:1px solid rgba(225,231,241,.3);padding:8px 15px;font-size:9px;letter-spacing:.25em;margin-top:12px;color:#d5dce7}
-.toast{position:fixed;z-index:100;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#e8edf5;color:#10131a;padding:12px 18px;border-radius:4px;font-size:12px;transition:.3s}
+.stat+.stat{border-left:1px solid rgba(210,180,120,.2)}
+.stat b{
+  display:block;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:20px;
+  letter-spacing:.08em;
+  color:#d9c18f;
+}
+.stat span{
+  display:block;
+  margin-top:8px;
+  font-size:9px;
+  letter-spacing:.2em;
+  color:#aaa18f;
+  text-transform:uppercase;
+}
+
+/* EXPERIENCE CARDS */
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  max-width:940px;
+  margin:0 auto;
+}
+.experience-card{
+  min-height:145px;
+  padding:23px 24px;
+  border-radius:7px;
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s,border-color .3s;
+}
+.experience-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(225,197,143,.55);
+  box-shadow:0 18px 38px rgba(0,0,0,.32);
+}
+.card-icon{
+  font-size:18px;
+  color:#d8bd87;
+  margin-bottom:13px;
+}
+.experience-card h3{
+  font-size:13px;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+  margin:0 0 9px;
+  color:#eee9df;
+}
+.experience-card p{
+  font-size:11px;
+  color:#aaa9a4;
+  line-height:1.65;
+  margin:0;
+  max-width:none;
+}
+
+/* EVENT DETAILS */
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:900px;
+  margin:0 auto;
+  gap:12px;
+}
+.info-item{
+  padding:22px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#1c1914,#11100e);
+  border-radius:6px;
+}
+.info-item span{
+  display:block;
+  font-size:9px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:#c9ad78;
+  margin-bottom:10px;
+}
+.info-item strong{
+  font-size:14px;
+  letter-spacing:.04em;
+  color:#e8e4db;
+}
+.info-item .pending{color:#d0c5ad;font-weight:500}
+
+/* ADMISSION */
+.admission-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  max-width:820px;
+  margin:auto;
+}
+.price-card{
+  min-height:155px;
+  padding:28px 22px;
+  text-align:center;
+  border-radius:8px;
+  background:linear-gradient(145deg,#202124,#111214);
+  border:1px solid rgba(222,224,226,.28);
+  box-shadow:0 12px 32px rgba(0,0,0,.2);
+}
+.price-label{
+  font-size:10px;
+  letter-spacing:.18em;
+  color:#d2d0c9;
+  text-transform:uppercase;
+}
+.price{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(29px,5vw,47px);
+  font-weight:800;
+  letter-spacing:-.04em;
+  margin:17px 0 8px;
+  background:linear-gradient(180deg,#fffdf8,#c7cbd0);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.price-note{
+  color:#a5a8ad;
+  font-size:10px;
+  letter-spacing:.15em;
+}
+.vip-card{
+  background:linear-gradient(145deg,#302516,#17130e 78%);
+  border-color:rgba(218,183,111,.72);
+  box-shadow:0 18px 42px rgba(135,98,39,.13);
+}
+.vip-card .price-label{color:#d8bd83}
+.vip-card .price{
+  background:linear-gradient(180deg,#fff0ce,#d0ad6e);
+  background-clip:text;
+  -webkit-background-clip:text;
+}
+.vip-card .price-note{color:#c9ad78}
+
+/* WHATSAPP */
+.whatsapp{
+  max-width:850px;
+  margin:auto;
+  padding:48px 38px;
+  text-align:center;
+  border-radius:8px;
+  background:linear-gradient(145deg,#1c1914,#11100e);
+  border:1px solid var(--line);
+  box-shadow:0 16px 42px rgba(0,0,0,.22);
+}
+.wa-list{
+  list-style:none;
+  padding:0;
+  margin:25px auto 32px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  max-width:590px;
+  text-align:left;
+}
+.wa-list li{color:#c1baad;font-size:12px}
+.wa-list li:before{
+  content:"✦";
+  color:#d8bd87;
+  margin-right:10px;
+}
+.wa-button{
+  background:linear-gradient(135deg,#f0e5ca,#bda879);
+  color:#17130c;
+  border-color:#d9c59a;
+  padding:18px 25px;
+  font-size:11px;
+  max-width:100%;
+}
+
+/* FOOTER */
+.footer{
+  padding:40px 0 32px;
+  text-align:center;
+  border-top:1px solid var(--line);
+  color:#aaa296;
+}
+.footer-brand{
+  font-family:'Space Grotesk',sans-serif;
+  color:#d7c7a3;
+  letter-spacing:.2em;
+  font-size:13px;
+}
+.footer p{
+  font-size:10px;
+  letter-spacing:.13em;
+  line-height:1.8;
+}
+.age{
+  display:inline-block;
+  border:1px solid rgba(205,185,143,.4);
+  padding:7px 12px;
+  color:#d7c7a3;
+  font-size:9px;
+  letter-spacing:.18em;
+  margin-top:10px;
+}
+.toast{
+  position:fixed;
+  bottom:24px;
+  left:50%;
+  transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
+  background:#e9dfc9;
+  color:#17130c;
+  padding:12px 18px;
+  border-radius:3px;
+  font-size:12px;
+  font-weight:700;
+  z-index:100;
+  transition:.3s;
+  box-shadow:0 10px 30px #0008;
+}
 .toast.show{opacity:1;transform:translate(-50%,0)}
-.loader{position:fixed;z-index:200;inset:0;background:#08090c;display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .55s ease,transform .55s ease;
+}
+.reveal.visible{opacity:1;transform:none}
+.loader{
+  position:fixed;
+  inset:0;
+  background:#090909;
+  z-index:200;
+  display:grid;
+  place-items:center;
+  transition:opacity .7s,visibility .7s;
+}
 .loader.hide{opacity:0;visibility:hidden}
 .loader-inner{text-align:center}
-.loader-mark{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,6vw,48px);letter-spacing:.15em;color:#dce2ec}
-.loader-sub{font-size:9px;letter-spacing:.35em;color:#8993a2;margin-top:12px}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:850px){.navlinks{gap:14px}.experience-grid{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){
-.wrap{width:min(var(--max),calc(100% - 30px))}
-.nav{height:64px}
-.brand{font-size:11px;letter-spacing:.12em}
-.menu-btn{display:block}
-.navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:rgba(8,9,12,.97);padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}
-.navlinks.open{display:flex}
-.navlinks a{padding:10px}
-.nav-cta{display:none}
-.hero{min-height:720px;padding:120px 0 70px}
-.hero-title .room{font-size:clamp(52px,15vw,90px)}
-.hero-title .pent{font-size:clamp(25px,7vw,43px);letter-spacing:.16em}
-.eyebrow{letter-spacing:.25em}
-.hero-sub{letter-spacing:.15em;line-height:1.8}
-section{padding:75px 0}
-.invite-panel{padding:24px 18px}
-.city-banner{padding:65px 0}
-.city-stats{grid-template-columns:1fr}
-.stat+.stat{border-left:0;border-top:1px solid var(--line)}
-.experience-grid{grid-template-columns:1fr}
-.info-grid{grid-template-columns:1fr 1fr}
-.info-item{padding:16px 13px}
-.info-item strong{font-size:12px}
-.admission-grid{grid-template-columns:1fr;gap:13px}
-.price-card{padding:29px 20px}
-.whatsapp{padding:35px 18px}
-.wa-list{grid-template-columns:1fr}
-.section-title{letter-spacing:.05em}
+.loader-mark{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:32px;
+  letter-spacing:.2em;
+  color:#d9c18f;
 }
-@media(max-width:380px){.info-grid{grid-template-columns:1fr}.hero-title .room{font-size:48px}.hero-title .pent{font-size:23px}}
-@media print{
-.topbar,.hero-actions,.scroll-cue,.panel-actions,.wa-button,.print-hide,#printBtn,.loader,.toast{display:none!important}
-body{background:#08090c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.hero{min-height:auto;padding:55px 0}
-.reveal{opacity:1!important;transform:none!important}
-section{padding:35px 0;break-inside:avoid}
-.city-banner{padding:35px 0}
-.experience-card,.info-item,.price-card,.whatsapp,.invite-panel{break-inside:avoid}
-.footer{padding:25px 0}
+.loader-line{
+  width:180px;
+  height:1px;
+  background:#393127;
+  margin:22px auto;
+  overflow:hidden;
+}
+.loader-line:after{
+  content:"";
+  display:block;
+  width:45%;
+  height:100%;
+  background:#d4b879;
+  animation:load 1.1s ease-in-out infinite;
+}
+.loader-caption{
+  font-size:9px;
+  letter-spacing:.3em;
+  color:#aaa296;
+}
+@keyframes load{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(240%)}
+}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;right:0;
+    padding:22px;
+    background:rgba(7,7,7,.98);
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    gap:20px;
+  }
+  .navlinks.open{display:flex}
+  .menu-btn{display:block}
+  .nav-cta{display:none}
+  .hero{min-height:650px}
+}
+@media(max-width:520px){
+  .wrap{width:min(100% - 30px,var(--max))}
+  .nav{height:64px}
+  .navlinks{top:64px}
+  .hero{min-height:620px;padding:112px 0 55px}
+  .hero-title .room{font-size:clamp(55px,15vw,82px)}
+  .hero-title .pent{
+    font-size:clamp(23px,6.7vw,36px);
+    letter-spacing:.13em;
+  }
+  .hero-sub{font-size:10px;letter-spacing:.11em;line-height:1.7}
+  .intro{font-size:12px}
+  .hostline{margin-top:28px}
+  section{padding:66px 0}
+  .invite-panel{padding:22px 16px}
+  .panel-actions{flex-direction:column}
+  .panel-actions .btn{width:100%}
+  .experience-grid{gap:9px}
+  .experience-card{min-height:155px;padding:16px 13px}
+  .experience-card h3{font-size:10px;line-height:1.45}
+  .experience-card p{font-size:9px;line-height:1.55}
+  .card-icon{font-size:16px;margin-bottom:10px}
+  .info-grid{gap:8px}
+  .info-item{padding:14px 11px}
+  .info-item span{font-size:8px;letter-spacing:.12em}
+  .info-item strong{font-size:10px;line-height:1.5}
+  .admission-grid{gap:9px}
+  .price-card{min-height:132px;padding:23px 9px}
+  .price-label{font-size:8px;letter-spacing:.1em;line-height:1.5}
+  .price{font-size:clamp(22px,6.4vw,31px);margin:15px 0 8px}
+  .price-note{font-size:8px;letter-spacing:.08em}
+  .whatsapp{padding:30px 15px}
+  .wa-list{grid-template-columns:1fr;max-width:260px}
+  .wa-button{font-size:9px;padding:16px 12px;letter-spacing:.06em}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+  .reveal{opacity:1;transform:none}
 }
 </style>
 </head>
+
 <body>
-<div class="loader" id="loader">
-<div class="loader-inner">
-<div class="loader-mark">ROOM 26</div>
-<div class="loader-sub">PENT HOUSE · ABUJA · 2026</div>
-</div>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">R26</div>
+    <div class="loader-line"></div>
+    <div class="loader-caption">PREPARING YOUR EXPERIENCE</div>
+  </div>
 </div>
 
 <header class="topbar">
-<div class="wrap nav">
-<a href="#home" class="brand">ROOM <span>26</span> PENT HOUSE</a>
-<nav class="navlinks" id="navlinks">
-<a href="#experience">Experience</a>
-<a href="#details">Details</a>
-<a href="#admission">Admission</a>
-<a href="#connect">Join Group</a>
-</nav>
-<a class="nav-cta" href="#invite">Get Invitation</a>
-<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-</div>
+  <div class="wrap nav">
+    <a class="brand" href="#home">ROOM <span>26</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#experience">Experience</a>
+      <a href="#apartments">The Gathering</a>
+      <a href="#details">Details</a>
+      <a href="#admission">Admission</a>
+      <a href="#connect">Updates</a>
+    </nav>
+    <a class="nav-cta" href="#personalise">Personalise invite ↗</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="hero-art"><div class="halo"></div><div class="beam"></div><div class="beam b2"></div></div>
-<div class="wrap hero-content">
-<div class="eyebrow">ABUJA · DECEMBER 2026 · STRICTLY 18+</div>
-<h1 class="hero-title"><span class="room">ROOM 26</span><span class="pent">PENT HOUSE</span></h1>
-<div class="hero-rule"></div>
-<div class="hero-sub">ONE CITY. MULTIPLE APARTMENTS. ONE BIG CELEBRATION.</div>
-<div class="hostline">PRESENTED BY</div>
-<h2 class="royal">DEEDEE</h2>
-<p class="intro">An end-of-year gathering bringing people together for food, drinks, games, entertainment, networking and unforgettable moments across Abuja. One night, multiple apartments, one big celebration — until daybreak.</p>
-<div class="hero-actions">
-<a href="#invite" class="btn">Create Your Invitation</a>
-<a href="#admission" class="btn secondary">View Admission</a>
-</div>
-<div class="scroll-cue">SCROLL TO EXPLORE</div>
-</div>
+  <div class="wrap hero-content">
+    <div class="eyebrow">ROOM 26 END-OF-YEAR CELEBRATION</div>
+    <h1 class="hero-title">
+      <span class="room">ROOM 26</span>
+      <span class="pent">PENT HOUSE</span>
+    </h1>
+    <div class="hero-sub">DECEMBER END-OF-YEAR CELEBRATION — ABUJA 2026</div>
+    <div class="hostline">DEEDEE cordially invites you</div>
+    <h2 class="royal">You’re invited!</h2>
+    <p class="intro">
+      You are specially invited to an exclusive end-of-year celebration
+      bringing together Big G Luxury, other notable personalities, and
+      Abuja’s big girls and big boys for an evening of entertainment,
+      food, games, networking and good company.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="#personalise">Enter your invitation ↗</a>
+      <a class="btn secondary" href="#experience">Explore the experience</a>
+    </div>
+  </div>
 </section>
 
-<section id="invite">
-<div class="wrap">
-<div class="section-kicker reveal">A personal invitation</div>
-<h2 class="section-title reveal">Your name. Your invitation.</h2>
-<p class="section-desc reveal">Create a personalised invitation to share with friends and guests.</p>
-<div class="invite-panel glass reveal">
-<label class="field-label" for="guestName">ENTER GUEST NAME</label>
-<input class="guest-input" id="guestName" type="text" maxlength="70" placeholder="Enter a guest's name">
-<div class="guest-preview"><small>PREPARED FOR</small><strong id="guestPreview">OUR ESTEEMED GUEST</strong></div>
-<div class="panel-actions">
-<button class="btn" id="copyBtn">Copy Invitation</button>
-<button class="btn secondary" id="shareBtn">Share Invitation</button>
-</div>
-<p class="note">Add a name, then copy or share the personalised invitation.</p>
-</div>
-</div>
+<section id="personalise">
+  <div class="wrap">
+    <div class="section-kicker reveal">Your invitation awaits</div>
+    <h2 class="section-title reveal">Make it personal</h2>
+    <p class="section-desc reveal">
+      Add your guest’s name to create a personalised invitation ready to share.
+    </p>
+    <div class="invite-panel glass reveal">
+      <label class="field-label" for="guestName">Guest name</label>
+      <input class="guest-input" id="guestName" type="text" maxlength="70"
+        autocomplete="name" placeholder="Enter guest's name (e.g. Alex)"
+        aria-label="Guest name">
+      <div class="guest-preview" aria-live="polite">
+        <small>A SPECIAL INVITATION FOR</small>
+        <strong id="guestPreview">OUR ESTEEMED GUEST</strong>
+      </div>
+      <div class="panel-actions">
+        <button class="btn" id="shareBtn">Share personalised invite ↗</button>
+        <button class="btn secondary" id="copyBtn">Copy invitation text ⧉</button>
+      </div>
+      <p class="note">
+        DEEDEE is the host. Add your guest's name above to personalise the
+        invitation. Sharing uses your device's share menu when available.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="city-banner">
-<div class="wrap">
-<h2 class="city-title">ONE CITY. <span>MULTIPLE APARTMENTS.</span><br>ONE BIG CELEBRATION.</h2>
-<p class="city-copy">Abuja comes together for a December end-of-year celebration. Different apartments, one shared experience, great company and a night that runs until daybreak.</p>
-<div class="city-stats">
-<div class="stat"><b>DEC 2026</b><span>Event month</span></div>
-<div class="stat"><b>ABUJA</b><span>FCT, Nigeria</span></div>
-<div class="stat"><b>18+</b><span>Adults only</span></div>
+<div class="city-banner" id="apartments">
+  <div class="wrap reveal">
+    <div class="section-kicker">Abuja, get ready</div>
+    <h2 class="city-title">
+      ONE CITY. <span>MULTIPLE APARTMENTS.</span><br>
+      ONE BIG CELEBRATION.
+    </h2>
+    <p class="city-copy">
+      Guests from across Abuja are coming together this December. Multiple
+      apartments may host different parts of the celebration; confirmed
+      arrangements will be shared in the official group. One night.
+      Endless experiences. Until daybreak.
+    </p>
+    <div class="city-stats">
+      <div class="stat"><b>ONE CITY</b><span>Abuja, FCT</span></div>
+      <div class="stat"><b>MULTIPLE</b><span>Apartments involved</span></div>
+      <div class="stat"><b>UNTIL DAYBREAK</b><span>The celebration</span></div>
+    </div>
+  </div>
 </div>
-</div>
-</section>
 
 <section id="experience">
-<div class="wrap">
-<div class="section-kicker reveal">More than a party</div>
-<h2 class="section-title reveal">The experience</h2>
-<p class="section-desc reveal">A planned end-of-year gathering with entertainment, connection and good company.</p>
-<div class="experience-grid">
-<div class="experience-card glass reveal"><div class="card-icon">✦</div><h3>Food & drinks</h3><p>Food, refreshments and dinner buffet arrangements for guests.</p></div>
-<div class="experience-card glass reveal"><div class="card-icon">◇</div><h3>Games & entertainment</h3><p>Fun activities, games and entertainment throughout the celebration.</p></div>
-<div class="experience-card glass reveal"><div class="card-icon">◎</div><h3>Networking</h3><p>Meet new people, connect and share business ideas and opportunities.</p></div>
-<div class="experience-card glass reveal"><div class="card-icon">▣</div><h3>Content & memories</h3><p>Capture moments, create content and enjoy the celebration with friends.</p></div>
-<div class="experience-card glass reveal"><div class="card-icon">⬟</div><h3>Bouncers & security</h3><p>Event security and bouncers will help manage entry and support guest safety.</p></div>
-<div class="experience-card glass reveal"><div class="card-icon">!</div><h3>Adult event notice</h3><p>This is an adults-only event where sexual activity may occur. Participation is optional and never expected or owed. Consent must be clear and freely given. Anyone can say no or change their mind. Respect everyone's boundaries. No coercion, harassment or unwanted touching.</p></div>
-<div class="experience-card glass reveal"><div class="card-icon">◷</div><h3>Until daybreak</h3><p>Nonstop entertainment and energy until daybreak.</p></div>
-</div>
-</div>
+  <div class="wrap">
+    <div class="section-kicker reveal">Curated for an unforgettable night</div>
+    <h2 class="section-title reveal">The party experience</h2>
+    <p class="section-desc reveal">
+      Expect food, drinks, games, entertainment, networking and a lively
+      end-of-year gathering.
+    </p>
+    <div class="experience-grid">
+      <div class="experience-card glass reveal">
+        <div class="card-icon">✧</div>
+        <h3>Food & drinks</h3>
+        <p>Plenty of delicious food and drinks to keep the celebration going.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">◈</div>
+        <h3>Dinner buffet</h3>
+        <p>A dinner buffet experience for guests to enjoy.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">♢</div>
+        <h3>Games & activities</h3>
+        <p>Exciting games and activities throughout the event.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">✦</div>
+        <h3>Adult entertainment</h3>
+        <p>Subject to venue arrangements and applicable rules.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">✦</div>
+        <h3>Special guest · Big G Luxury</h3>
+        <p>
+          Big G Luxury, the popular celebrity and clothing entrepreneur,
+          will be present alongside other notable Abuja personalities,
+          big girls and big boys.
+        </p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">◎</div>
+        <h3>Social atmosphere</h3>
+        <p>A lively atmosphere and opportunities to meet new people.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">⌁</div>
+        <h3>Networking</h3>
+        <p>Make meaningful connections with people from across Abuja.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">▣</div>
+        <h3>Content creation</h3>
+        <p>Capture memorable moments and create content worth keeping.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">↗</div>
+        <h3>Business showcase</h3>
+        <p>Opportunities to showcase and promote businesses.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">◇</div>
+        <h3>Take-home souvenirs</h3>
+        <p>Souvenirs may be available, subject to final event arrangements.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">⬟</div>
+        <h3>Bouncers & security</h3>
+        <p>Event security and bouncers will help manage entry and support guest safety.</p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">!</div>
+        <h3>Adult event notice</h3>
+        <p>
+          This is an adults-only event where sexual activity may occur.
+          Participation is optional and never expected or owed. Consent
+          must be clear and freely given, and can be withdrawn at any time.
+          Respect everyone’s boundaries. No coercion, harassment or
+          unwanted touching.
+        </p>
+      </div>
+      <div class="experience-card glass reveal">
+        <div class="card-icon">◷</div>
+        <h3>Until daybreak</h3>
+        <p>Nonstop entertainment and energy until daybreak.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="details">
-<div class="wrap">
-<div class="section-kicker reveal">The essential details</div>
-<h2 class="section-title reveal">Event information</h2>
-<p class="section-desc reveal">Keep the details close. Confirmed date, time and apartment locations will be shared through the official WhatsApp group.</p>
-<div class="info-grid reveal">
-<div class="info-item"><span>Event</span><strong>ROOM 26 PENT HOUSE</strong></div>
-<div class="info-item"><span>Host</span><strong>DEEDEE</strong></div>
-<div class="info-item"><span>Month</span><strong>December 2026</strong></div>
-<div class="info-item"><span>Location</span><strong>Abuja, FCT, Nigeria</strong></div>
-<div class="info-item"><span>Date</span><strong class="pending">To be announced</strong></div>
-<div class="info-item"><span>Time</span><strong class="pending">To be announced</strong></div>
-<div class="info-item"><span>Duration</span><strong>Until daybreak</strong></div>
-<div class="info-item"><span>Age restriction</span><strong>Strictly 18+</strong></div>
-<div class="info-item"><span>Apartment addresses</span><strong class="pending">To be announced</strong></div>
-</div>
-</div>
+  <div class="wrap">
+    <div class="section-kicker reveal">The essential details</div>
+    <h2 class="section-title reveal">Event information</h2>
+    <p class="section-desc reveal">
+      Keep the details close. Confirmed date, time and apartment locations
+      will be shared through the official WhatsApp group.
+    </p>
+    <div class="info-grid reveal">
+      <div class="info-item"><span>Event</span><strong>ROOM 26 PENT HOUSE</strong></div>
+      <div class="info-item"><span>Host</span><strong>DEEDEE</strong></div>
+      <div class="info-item"><span>Month</span><strong>December 2026</strong></div>
+      <div class="info-item"><span>Location</span><strong>Abuja, FCT, Nigeria</strong></div>
+      <div class="info-item"><span>Date</span><strong class="pending">To be announced</strong></div>
+      <div class="info-item"><span>Time</span><strong class="pending">To be announced</strong></div>
+      <div class="info-item"><span>Duration</span><strong>Until daybreak</strong></div>
+      <div class="info-item"><span>Age restriction</span><strong>Strictly 18+</strong></div>
+      <div class="info-item"><span>Apartment addresses</span><strong class="pending">To be announced</strong></div>
+    </div>
+  </div>
 </section>
 
 <section id="admission">
-<div class="wrap">
-<div class="section-kicker reveal">Your pass to the experience</div>
-<h2 class="section-title reveal">Admission</h2>
-<p class="section-desc reveal">Regular and VIP admission options are available. Check the official WhatsApp group for confirmed arrangements.</p>
-<div class="admission-grid">
-<div class="price-card glass reveal"><div class="price-label">Regular · Boys / Men</div><div class="price">₦30,000</div><div class="price-note">REGULAR ADMISSION</div></div>
-<div class="price-card glass reveal"><div class="price-label">Regular · Girls / Ladies</div><div class="price">₦20,000</div><div class="price-note">REGULAR ADMISSION</div></div>
-<div class="price-card glass reveal vip-card"><div class="price-label">VIP · Boys / Men</div><div class="price">₦50,000</div><div class="price-note">VIP ADMISSION</div></div>
-<div class="price-card glass reveal vip-card"><div class="price-label">VIP · Girls / Ladies</div><div class="price">₦30,000</div><div class="price-note">VIP ADMISSION</div></div>
-</div>
-<p class="note">Please join the official WhatsApp group for ticketing instructions and confirmed event arrangements.</p>
-</div>
+  <div class="wrap">
+    <div class="section-kicker reveal">Your pass to the experience</div>
+    <h2 class="section-title reveal">Admission</h2>
+    <p class="section-desc reveal">
+      Regular and VIP admission options are available. Check the official
+      WhatsApp group for confirmed arrangements.
+    </p>
+    <div class="admission-grid">
+      <div class="price-card glass reveal">
+        <div class="price-label">Regular · Boys / Men</div>
+        <div class="price">₦30,000</div>
+        <div class="price-note">REGULAR ADMISSION</div>
+      </div>
+      <div class="price-card glass reveal">
+        <div class="price-label">Regular · Girls / Ladies</div>
+        <div class="price">₦20,000</div>
+        <div class="price-note">REGULAR ADMISSION</div>
+      </div>
+      <div class="price-card glass reveal vip-card">
+        <div class="price-label">VIP · Boys / Men</div>
+        <div class="price">₦50,000</div>
+        <div class="price-note">VIP ADMISSION</div>
+      </div>
+      <div class="price-card glass reveal vip-card">
+        <div class="price-label">VIP · Girls / Ladies</div>
+        <div class="price">₦30,000</div>
+        <div class="price-note">VIP ADMISSION</div>
+      </div>
+    </div>
+    <p class="note">
+      Please join the official WhatsApp group for ticketing instructions
+      and confirmed event arrangements.
+    </p>
+  </div>
 </section>
 
 <section id="qr-code">
-<div class="wrap">
-<div class="whatsapp glass reveal">
-<div class="section-kicker">Scan to join</div>
-<h2 class="section-title">ROOM 26 WHATSAPP QR</h2>
-<p class="section-desc">Scan this code with your phone camera to open the official ROOM 26 PENT HOUSE WhatsApp group.</p>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=350x350&margin=12&data=https%3A%2F%2Fchat.whatsapp.com%2FEHjA8zHRribIkr638AyN2d%3Fmode%3Dgi_t" alt="QR code for the ROOM 26 PENT HOUSE WhatsApp group" style="display:block;width:min(280px,80%);height:auto;margin:0 auto 24px;background:white;padding:12px;border-radius:8px">
-<a class="btn wa-button" href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t" target="_blank" rel="noopener noreferrer">OPEN WHATSAPP GROUP ↗</a>
-</div>
-</div>
+  <div class="wrap">
+    <div class="whatsapp glass reveal">
+      <div class="section-kicker">Join the celebration</div>
+      <h2 class="section-title">ROOM 26 WHATSAPP GROUP</h2>
+      <p class="section-desc">
+        Join the official group for event announcements, ticketing
+        instructions and confirmed apartment details.
+      </p>
+      <a class="btn wa-button"
+        href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t"
+        target="_blank" rel="noopener noreferrer">
+        OPEN OFFICIAL WHATSAPP GROUP ↗
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="connect">
-<div class="wrap">
-<div class="whatsapp glass reveal">
-<div class="wa-icon">◉</div>
-<div class="section-kicker">Stay in the loop</div>
-<h2 class="section-title">STAY CONNECTED —<br>DON'T MISS THE UPDATES.</h2>
-<p class="section-desc" style="margin-bottom:0">Join the official ROOM 26 WhatsApp group to receive important announcements and the latest event information.</p>
-<ul class="wa-list">
-<li>Confirmed event date</li>
-<li>Apartment locations across Abuja</li>
-<li>Tickets and admission</li>
-<li>Entertainment updates</li>
-<li>Event arrangements</li>
-<li>Other important announcements</li>
-</ul>
-<a class="btn wa-button" href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t" target="_blank" rel="noopener noreferrer">JOIN THE OFFICIAL ROOM 26 WHATSAPP GROUP ↗</a>
-<p class="note">The button opens the official WhatsApp group invitation link.</p>
-</div>
-</div>
+  <div class="wrap">
+    <div class="whatsapp glass reveal">
+      <div class="section-kicker">Stay in the loop</div>
+      <h2 class="section-title">STAY CONNECTED —<br>DON'T MISS THE UPDATES.</h2>
+      <p class="section-desc" style="margin-bottom:0">
+        Join the official ROOM 26 WhatsApp group to receive important
+        announcements and the latest event information.
+      </p>
+      <ul class="wa-list">
+        <li>Confirmed event date</li>
+        <li>Apartment locations across Abuja</li>
+        <li>Tickets and admission</li>
+        <li>Entertainment updates</li>
+        <li>Event arrangements</li>
+        <li>Other important announcements</li>
+      </ul>
+      <a class="btn wa-button"
+        href="https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t"
+        target="_blank" rel="noopener noreferrer">
+        JOIN THE OFFICIAL ROOM 26 WHATSAPP GROUP ↗
+      </a>
+      <p class="note">The button opens the official WhatsApp group invitation link.</p>
+    </div>
+  </div>
 </section>
 </main>
 
 <footer class="footer">
-<div class="wrap">
-<div class="footer-brand">ROOM 26 PENT HOUSE</div>
-<p>DECEMBER END-OF-YEAR CELEBRATION · ABUJA 2026<br>Hosted by DEEDEE</p>
-<div class="age">STRICTLY 18+</div>
-<p style="margin-top:22px">ONE NIGHT. ENDLESS EXPERIENCES. UNTIL DAYBREAK.</p>
-<button class="btn secondary" id="printBtn" style="margin-top:12px">Print / Save as PDF ⤓</button>
-<p style="margin-top:22px">© 2026 ROOM 26 PENT HOUSE. ALL RIGHTS RESERVED.</p>
-</div>
+  <div class="wrap">
+    <div class="footer-brand">ROOM 26 PENT HOUSE</div>
+    <p>DECEMBER END-OF-YEAR CELEBRATION · ABUJA 2026<br>Hosted by DEEDEE</p>
+    <div class="age">STRICTLY 18+</div>
+    <p style="margin-top:22px">ONE NIGHT. ENDLESS EXPERIENCES. UNTIL DAYBREAK.</p>
+    <button class="btn secondary" id="printBtn" style="margin-top:12px">
+      Print / Save as PDF ⤓
+    </button>
+    <p style="margin-top:22px">© 2026 ROOM 26 PENT HOUSE. ALL RIGHTS RESERVED.</p>
+  </div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (() => {
-const groupLink='https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t';
-const guestInput=document.getElementById('guestName');
-const guestPreview=document.getElementById('guestPreview');
-const toast=document.getElementById('toast');
-const nav=document.getElementById('navlinks');
-let toastTimer;
+  const groupLink = 'https://chat.whatsapp.com/EHjA8zHRribIkr638AyN2d?mode=gi_t';
+  const guestInput = document.getElementById('guestName');
+  const guestPreview = document.getElementById('guestPreview');
+  const toast = document.getElementById('toast');
+  const nav = document.getElementById('navlinks');
+  let toastTimer;
 
-const cleanName=value=>value.trim().replace(/\s+/g,' ').slice(0,70);
-const guestName=()=>cleanName(guestInput.value)||'OUR ESTEEMED GUEST';
+  const cleanName = value =>
+    value.trim().replace(/\s+/g, ' ').slice(0, 70);
 
-function invitationText(){
-const name=guestName();
-const greeting=name==='OUR ESTEEMED GUEST'?'You are specially invited':`A special invitation for ${name}`;
-return `ROOM 26 PENT HOUSE
+  const guestName = () =>
+    cleanName(guestInput.value) || 'OUR ESTEEMED GUEST';
+
+  function invitationText() {
+    const name = guestName();
+    const greeting = name === 'OUR ESTEEMED GUEST'
+      ? 'You are specially invited'
+      : `A special invitation for ${name}`;
+
+    return `ROOM 26 PENT HOUSE
 DECEMBER END-OF-YEAR CELEBRATION — ABUJA 2026
 
 DEEDEE CORDIALLY INVITES YOU
 
 ${greeting}!
 
-You’re invited to an end-of-year celebration bringing people together for entertainment, food, games, networking and good company.
+You are invited to an end-of-year celebration in Abuja, bringing people together for food, drinks, games, entertainment, networking and good company.
+
+SPECIAL GUEST
+Big G Luxury — popular celebrity and clothing entrepreneur — will be present alongside other notable personalities, big girls and big boys in Abuja.
 
 ONE CITY. MULTIPLE APARTMENTS. ONE BIG CELEBRATION.
 One night. Endless experiences. Until daybreak.
 
 SPECIAL HIGHLIGHTS
-Food and drinks, dinner buffet arrangements, games, networking, entertainment, and bouncers/security.
+Food and drinks, dinner buffet, games, entertainment, networking, business showcase, souvenirs (subject to arrangements), and bouncers/security.
 
 EVENT DETAILS
 Month: December 2026
@@ -366,7 +1012,7 @@ Date: To be announced
 Time: To be announced
 Duration: Until daybreak
 Security: Bouncers and event security planned
-Adult event notice: Sexual activity may occur, but participation is optional and never expected or owed. Consent must be clear and freely given. Anyone can say no or change their mind. Respect everyone's boundaries. No coercion, harassment or unwanted touching.
+Adult event notice: Sexual activity may occur, but it is optional. No one is obligated or expected to participate. Consent must be clear and freely given, boundaries must be respected, and anyone can say no or change their mind. No coercion, harassment or unwanted touching.
 Age restriction: Strictly 18+
 
 ADMISSION
@@ -376,91 +1022,133 @@ VIP Boys / Men: ₦50,000
 VIP Girls / Ladies: ₦30,000
 
 Join the official WhatsApp group for updates: ${groupLink}`;
-}
+  }
 
-function showToast(message){
-toast.textContent=message;
-toast.classList.add('show');
-clearTimeout(toastTimer);
-toastTimer=setTimeout(()=>toast.classList.remove('show'),2600);
-}
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+  }
 
-guestInput.addEventListener('input',()=>{
-const name=cleanName(guestInput.value);
-guestPreview.textContent=name?name.toUpperCase():'OUR ESTEEMED GUEST';
-const url=new URL(window.location.href);
-if(name)url.searchParams.set('guest',name);
-else url.searchParams.delete('guest');
-window.history.replaceState({},'',url.toString());
-});
+  guestInput.addEventListener('input', () => {
+    const name = cleanName(guestInput.value);
+    guestPreview.textContent = name ? name.toUpperCase() : 'OUR ESTEEMED GUEST';
 
-function fallbackCopy(text){
-const area=document.createElement('textarea');
-area.value=text;
-area.style.position='fixed';
-area.style.opacity='0';
-document.body.appendChild(area);
-area.select();
-try{document.execCommand('copy');showToast('Invitation copied.');}
-catch(e){showToast('Copy is unavailable on this browser.');}
-area.remove();
-}
+    const url = new URL(window.location.href);
+    if (name) url.searchParams.set('guest', name);
+    else url.searchParams.delete('guest');
 
-document.getElementById('copyBtn').addEventListener('click',async()=>{
-try{
-await navigator.clipboard.writeText(invitationText());
-showToast('Personalised invitation copied.');
-}catch(e){fallbackCopy(invitationText());}
-});
+    window.history.replaceState({}, '', url.toString());
+  });
 
-document.getElementById('shareBtn').addEventListener('click',async()=>{
-const shareData={
-title:'ROOM 26 PENT HOUSE — Abuja 2026',
-text:invitationText(),
-url:window.location.href
-};
-if(navigator.share){
-try{await navigator.share(shareData);}
-catch(e){if(e.name!=='AbortError')showToast('Unable to open sharing on this device.');}
-}else{
-fallbackCopy(`${invitationText()}\n\nOpen invitation: ${window.location.href}`);
-}
-});
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(invitationText());
+      showToast('Personalised invitation copied.');
+    } catch (e) {
+      fallbackCopy(invitationText());
+    }
+  });
 
-document.getElementById('printBtn').addEventListener('click',()=>window.print());
+  function fallbackCopy(text) {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
 
-document.getElementById('menuBtn').addEventListener('click',()=>{
-const open=nav.classList.toggle('open');
-document.getElementById('menuBtn').setAttribute('aria-expanded',String(open));
-document.getElementById('menuBtn').textContent=open?'✕':'☰';
-});
+    try {
+      document.execCommand('copy');
+      showToast('Invitation copied.');
+    } catch (e) {
+      showToast('Copy is unavailable on this browser.');
+    }
 
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-nav.classList.remove('open');
-document.getElementById('menuBtn').setAttribute('aria-expanded','false');
-document.getElementById('menuBtn').textContent='☰';
-}));
+    area.remove();
+  }
 
-const params=new URLSearchParams(window.location.search);
-const incomingGuest=params.get('guest');
-if(incomingGuest){
-guestInput.value=cleanName(incomingGuest);
-guestPreview.textContent=guestInput.value.toUpperCase();
-}
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    const shareData = {
+      title: 'ROOM 26 PENT HOUSE — Abuja 2026',
+      text: invitationText(),
+      url: window.location.href
+    };
 
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-observer.unobserve(entry.target);
-}
-}),{threshold:.12});
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (e) {
+        if (e.name !== 'AbortError') {
+          showToast('Unable to open sharing on this device.');
+        }
+      }
+    } else {
+      fallbackCopy(`${invitationText()}\n\nOpen invitation: ${window.location.href}`);
+    }
+  });
 
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  document.getElementById('printBtn').addEventListener('click', () => {
+    window.print();
+  });
 
-window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('hide'),650));
-window.addEventListener('pageshow',()=>setTimeout(()=>document.getElementById('loader').classList.add('hide'),650));
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    document.getElementById('menuBtn').setAttribute('aria-expanded', String(open));
+    document.getElementById('menuBtn').textContent = open ? '✕' : '☰';
+  });
+
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      document.getElementById('menuBtn').setAttribute('aria-expanded', 'false');
+      document.getElementById('menuBtn').textContent = '☰';
+    });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const incomingGuest = params.get('guest');
+
+  if (incomingGuest) {
+    guestInput.value = cleanName(incomingGuest);
+    guestPreview.textContent = guestInput.value.toUpperCase();
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('hide'), 650);
+  });
+
+  window.addEventListener('pageshow', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('hide'), 650);
+  });
 })();
 </script>
 
+<style>
+@media print{
+  .topbar,.hero-actions,.panel-actions,.wa-button,.print-hide,
+  .loader,.toast,#printBtn{display:none!important}
+  body{background:#090909!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hero{min-height:auto;padding:55px 0}
+  .reveal{opacity:1!important;transform:none!important}
+  section{padding:35px 0;break-inside:avoid}
+  .city-banner{padding:35px 0}
+  .experience-card,.info-item,.price-card,.whatsapp,.invite-panel{break-inside:avoid}
+  .footer{padding:25px 0}
+}
+</style>
 </body>
 </html>
+
