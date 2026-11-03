@@ -985,13 +985,49 @@ const $ = id => document.getElementById(id);
 const setStatus = (id,msg,isError=false) => { const el=$(id); if(el){el.textContent=msg;el.style.color=isError?'#a13c28':'#327a5e';} };
 
 // Public guest registration: creates a pending record only.
-$('guestRegistrationForm').addEventListener('submit',async e=>{
- e.preventDefault();const btn=e.currentTarget.querySelector('button');btn.disabled=true;setStatus('registrationStatus','Submitting your registration…');
- const payload={full_name:$('regName').value.trim(),email:$('regEmail').value.trim(),ticket_type:$('regTicket').value,gender:$('regGender').value};
- const {error}=await room26Supabase.from('guests').insert(payload);
- btn.disabled=false;
- if(error){setStatus('registrationStatus','Could not submit: '+error.message,true);return;}
- e.currentTarget.reset();setStatus('registrationStatus','Registration received. Your payment is still pending until the organiser confirms it.');
+$('guestRegistrationForm').addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const btn = form.querySelector('button');
+
+  if (btn.disabled) return;
+
+  btn.disabled = true;
+  setStatus('registrationStatus', 'Submitting your registration…');
+
+  const payload = {
+    full_name: $('regName').value.trim(),
+    email: $('regEmail').value.trim(),
+    ticket_type: $('regTicket').value,
+    gender: $('regGender').value
+  };
+
+  try {
+    const { error } = await room26Supabase
+      .from('guests')
+      .insert(payload);
+
+    if (error) {
+      setStatus('registrationStatus', 'Could not submit: ' + error.message, true);
+      return;
+    }
+
+    form.reset();
+    setStatus(
+      'registrationStatus',
+      'Registration received. Your payment is still pending until the organiser confirms it.'
+    );
+
+  } catch (error) {
+    setStatus(
+      'registrationStatus',
+      'Connection error. Please check your internet and try again.',
+      true
+    );
+  } finally {
+    btn.disabled = false;
+  }
 });
 
 // Organiser login and session
