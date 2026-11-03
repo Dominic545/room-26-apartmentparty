@@ -24,7 +24,6 @@
 }
 
 * {box-sizing:border-box;margin:0;padding:0}
-
 html {scroll-behavior:smooth}
 
 body {
@@ -200,9 +199,7 @@ body {
   animation-delay:1.2s;
 }
 
-.section {
-  padding:25px 21px;
-}
+.section {padding:25px 21px}
 
 .section-label {
   font-size:10px;
@@ -276,10 +273,7 @@ body {
   transition:.3s;
 }
 
-.pastel-card:hover {
-  transform:translateY(-5px);
-}
-
+.pastel-card:hover {transform:translateY(-5px)}
 .pastel-card:nth-child(1){background:#ffdf7d}
 .pastel-card:nth-child(2){background:#80e8d2}
 .pastel-card:nth-child(3){background:#d9c2ff}
@@ -302,9 +296,7 @@ body {
   color:#555;
 }
 
-.price-heading {
-  margin-bottom:17px;
-}
+.price-heading {margin-bottom:17px}
 
 .price-card {
   background:#fff;
@@ -314,9 +306,7 @@ body {
   box-shadow:0 8px 25px #00000009;
 }
 
-.price-card.standard {
-  border:1px solid #eeeae4;
-}
+.price-card.standard {border:1px solid #eeeae4}
 
 .price-card.vip {
   background:linear-gradient(135deg,#29231b,#68502c 55%,#a27a36);
@@ -359,9 +349,7 @@ body {
   border-top:1px solid #eeeae4;
 }
 
-.vip .price-row {
-  border-color:#ffffff30;
-}
+.vip .price-row {border-color:#ffffff30}
 
 .price-row small {
   display:block;
@@ -375,9 +363,7 @@ body {
   font-weight:900;
 }
 
-.vip .price-row strong {
-  color:#ffe6a1;
-}
+.vip .price-row strong {color:#ffe6a1}
 
 .vip-note {
   font-size:10px;
@@ -428,9 +414,7 @@ body {
   color:#69564e;
 }
 
-.notice strong {
-  color:#a13c28;
-}
+.notice strong {color:#a13c28}
 
 .network {
   background:#e5f8f1;
@@ -468,10 +452,7 @@ body {
 .date-line:last-child{border:0}
 .date-line span{color:var(--muted)}
 .date-line strong{font-weight:800}
-
-.soon {
-  color:#a77a25;
-}
+.soon{color:#a77a25}
 
 .join {
   background:#292720;
@@ -509,21 +490,9 @@ body {
 }
 
 .btn:hover {transform:scale(.98)}
-
-.btn-gold {
-  background:linear-gradient(120deg,#ffe9ac,#c39a48);
-  color:#342713;
-}
-
-.btn-white {
-  background:white;
-  color:#24231f;
-}
-
-.btn-green {
-  background:#25d366;
-  color:#fff;
-}
+.btn-gold {background:linear-gradient(120deg,#ffe9ac,#c39a48);color:#342713}
+.btn-white {background:white;color:#24231f}
+.btn-green {background:#25d366;color:#fff}
 
 footer {
   text-align:center;
@@ -577,6 +546,74 @@ footer a {
 @media(min-width:700px) {
   .phone{margin:20px auto;border-radius:28px;min-height:auto}
 }
+
+/* PHOTO SLIDESHOW */
+.room26-showcase{padding:12px 15px 18px}
+.room26-slider{position:relative;width:100%;height:270px;border-radius:24px;overflow:hidden;background:#e8e2db;box-shadow:0 12px 28px #00000012;touch-action:pan-y}
+.room26-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease,transform 5s ease;transform:scale(1.045)}
+.room26-slide.active{opacity:1;transform:scale(1)}
+.room26-slide img{width:100%;height:100%;display:block;object-fit:cover}
+.room26-slider:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#00000025);pointer-events:none}
+.room26-controls{position:absolute;z-index:2;left:0;right:0;bottom:13px;display:flex;align-items:center;justify-content:center;gap:7px}
+.room26-dot{width:7px;height:7px;border:0;border-radius:20px;background:#ffffff80;padding:0;cursor:pointer;transition:width .25s,background .25s}
+.room26-dot.active{width:21px;background:#fff}
+.room26-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:34px;height:34px;border:1px solid #ffffff70;border-radius:50%;background:#ffffffb8;color:#20201f;font-size:21px;line-height:1;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
+.room26-arrow.prev{left:12px}
+.room26-arrow.next{right:12px}
+
+@media(min-width:700px){.room26-slider{height:320px}}
+@media(prefers-reduced-motion:reduce){.room26-slide{transition:none}}
+
+/* READ-TO-THE-END REMINDER */
+.read-everything {
+  margin:16px 0 18px;
+  padding:14px 15px;
+  border-left:3px solid #b58a38;
+  border-radius:0 12px 12px 0;
+  background:#f7f1e5;
+  color:#5d4a2c;
+  font-size:11px;
+  line-height:1.65;
+  font-weight:800;
+  letter-spacing:.25px;
+}
+
+/* ORGANISER PAYMENT AND PRINT INVITATION */
+.organiser-preview {
+  margin:18px 15px 22px;
+  padding:22px;
+  border:1px solid #e9e2d8;
+  border-radius:24px;
+  background:#fff;
+  box-shadow:0 12px 30px #0000000a;
+}
+
+.organiser-preview .section-label{color:#9b793b}
+.organiser-preview h2{font-family:'Playfair Display',serif;font-size:27px;line-height:1.15;margin:8px 0 10px}
+.organiser-preview p{font-size:13px;line-height:1.65;color:#77716a;margin-bottom:14px}
+.organiser-preview label{display:block;font-size:11px;font-weight:800;letter-spacing:.7px;margin:13px 0 6px;color:#5e5952}
+.organiser-preview input,.organiser-preview select{width:100%;border:1px solid #e4ded5;border-radius:12px;padding:13px 12px;background:#fcfbf9;font:inherit;font-size:14px;color:#252321;outline:none}
+.organiser-preview input:focus,.organiser-preview select:focus{border-color:#b58a38;box-shadow:0 0 0 3px #b58a381c}
+.organiser-preview .paid-check{display:flex;align-items:center;gap:9px;margin:15px 0;font-size:12px;font-weight:700;color:#514b43}
+.organiser-preview .paid-check input{width:17px;height:17px;accent-color:#327a5e}
+.organiser-preview button{border:0;border-radius:999px;padding:13px 17px;font:inherit;font-size:12px;font-weight:800;cursor:pointer;width:100%;margin-top:8px}
+.organiser-preview .generate{background:#20201f;color:white}
+.organiser-preview .copy-code{background:#e8f4ed;color:#225c40}
+.organiser-preview .ticket{display:none;margin-top:18px;border:1px dashed #b58a38;border-radius:18px;padding:20px;background:linear-gradient(145deg,#fffdf7,#f8f1df);text-align:center}
+.organiser-preview .ticket small{font-size:9px;letter-spacing:2px;font-weight:900;color:#92712f}
+.organiser-preview .ticket h3{font-family:'Playfair Display',serif;font-size:26px;margin:8px 0}
+.organiser-preview .ticket .ticket-name{font-size:18px;font-weight:900;color:#20201f;margin:7px 0}
+.organiser-preview .ticket-code{display:inline-block;background:#20201f;color:#fff;padding:10px 14px;border-radius:9px;letter-spacing:2px;font-weight:900;margin:10px 0}
+.organiser-preview .ticket-note{font-size:10px;color:#766d5d;margin:8px 0 0}
+.organiser-preview .email-note{font-size:11px;color:#8b6c35;margin-top:12px}
+
+@media print {
+  body{background:white!important}
+  .phone{box-shadow:none!important;max-width:none!important}
+  .topbar,.hero,.section,.join,footer,.room26-showcase,.organiser-preview form,.organiser-preview>p,.organiser-preview>.section-label,.organiser-preview>h2{display:none!important}
+  .organiser-preview{display:block!important;border:0!important;box-shadow:none!important;margin:0!important;padding:20px!important}
+  .organiser-preview .ticket{display:block!important;border:2px solid #b58a38!important;max-width:500px;margin:30px auto!important;break-inside:avoid}
+}
 </style>
 </head>
 
@@ -612,6 +649,11 @@ footer a {
 <section class="section reveal">
   <div class="section-label">THE INVITATION</div>
   <h2>Abuja, this one's different.</h2>
+
+  <div class="read-everything">
+    PLEASE READ THIS INVITATION TO THE VERY END. Important information about tickets, event arrangements, updates and entry is included throughout. Don’t miss any details.
+  </div>
+
   <p class="intro">
     An idea to bring together some of Abuja's most popular big boys,
     beautiful girls, entrepreneurs, creatives and social personalities
@@ -677,8 +719,8 @@ footer a {
     </div>
 
     <div class="price-row">
-      <div><small>LADIES</small><strong>₦15,000</strong></div>
-      <div><small>GENTLEMEN</small><strong>₦20,000</strong></div>
+      <div><small>LADIES</small><strong>₦20,000</strong></div>
+      <div><small>GENTLEMEN</small><strong>₦30,000</strong></div>
     </div>
   </div>
 
@@ -775,8 +817,7 @@ footer a {
      JOIN THE WHATSAPP GROUP ↗
   </a>
 
-  <a class="btn btn-gold"
-     href="tel:09066547511">
+  <a class="btn btn-gold" href="tel:09066547511">
      CALL FOR ENQUIRIES · 09066547511
   </a>
 
@@ -785,6 +826,115 @@ footer a {
      target="_blank" rel="noopener">
      CHAT WITH THE ORGANISER
   </a>
+</section>
+
+<section class="organiser-preview reveal" id="organiserTools">
+  <div class="section-label">ORGANISER · PAYMENT RECORD</div>
+  <h2>Issue an official invitation.</h2>
+
+  <p>
+    ORGANISER USE ONLY: First verify the guest’s payment outside this website
+    (for example, check the bank alert or transfer receipt). Then enter the
+    guest’s name and email, choose the ticket paid for, and tick the payment
+    confirmation box. Generate the code only after you have confirmed the
+    money has arrived. This preview runs in this browser only; it is not yet
+    connected to a secure organiser account or email service.
+  </p>
+
+  <form id="issueForm">
+    <label for="guestName">GUEST FULL NAME</label>
+    <input id="guestName" type="text" placeholder="Enter guest's full name" required>
+
+    <label for="guestEmail">GUEST EMAIL ADDRESS</label>
+    <input id="guestEmail" type="email" placeholder="name@example.com" required>
+
+    <label for="guestTicket">TICKET CATEGORY</label>
+    <select id="guestTicket" required>
+      <option value="">Select ticket</option>
+      <option value="Standard · Ladies · ₦20,000">Standard · Ladies · ₦20,000</option>
+      <option value="Standard · Gentlemen · ₦30,000">Standard · Gentlemen · ₦30,000</option>
+      <option value="VIP Gold · Ladies · ₦30,000">VIP Gold · Ladies · ₦30,000</option>
+      <option value="VIP Gold · Gentlemen · ₦50,000">VIP Gold · Gentlemen · ₦50,000</option>
+    </select>
+
+    <label class="paid-check">
+      <input id="paymentReceived" type="checkbox" required>
+      I confirm payment has been received separately.
+    </label>
+
+    <button class="generate" type="submit">GENERATE INVITATION CODE</button>
+  </form>
+
+  <div class="ticket" id="printTicket" aria-live="polite">
+    <small>ROOM 26 / PENT HOUSE · ABUJA 2026</small>
+    <h3>OFFICIAL INVITATION</h3>
+    <div class="ticket-name" id="ticketName"></div>
+    <p id="ticketType"></p>
+    <div class="ticket-code" id="ticketCode"></div>
+    <p class="ticket-note">
+      PAYMENT MARKED AS RECEIVED BY ORGANISER · PRESENT THIS INVITATION AT ENTRY
+    </p>
+    <p class="ticket-note" id="ticketEmail"></p>
+  </div>
+
+  <button class="copy-code" id="copyInviteCode" type="button" style="display:none">
+    COPY INVITATION CODE
+  </button>
+
+  <button id="printInvite" type="button"
+    style="display:none;background:#f1e7d1;color:#5d4720">
+    PRINT GUEST INVITATION
+  </button>
+
+  <div class="email-note">
+    The code is generated in this browser using the browser’s secure
+    random-number generator. Copy it into your guest/payment register so
+    you can check it at the door. This demo does not save a central record
+    or send emails yet; secure code lookup and automatic email delivery
+    must be connected before launch.
+  </div>
+</section>
+
+<!-- PHOTO SLIDESHOW -->
+<section class="room26-showcase" aria-label="Photo slideshow">
+  <div class="room26-slider" id="room26Slider">
+
+    <div class="room26-slide active">
+      <img src="https://image-tc.galaxy.tf/wijpeg-ecr9l26jln0tcr5yshghmotpd/dsc00613_standard.jpg?crop=110%2C0%2C1781%2C1336" alt="" fetchpriority="high">
+    </div>
+
+    <div class="room26-slide">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/b9/2d/84/the-bar-view-from-the.jpg?h=-1&s=1&w=1200" alt="" loading="lazy">
+    </div>
+
+    <div class="room26-slide">
+      <img src="https://pub-5bcc3edf34304d04b59dc91e1ad9d2fd.r2.dev/nigeria.tortoisepath.com/uploads/2024/04/13104952/Sugar-52-Rooftop-Pool-Bar-Lagos-Nigeria-TortoisePathcom-9-jpeg.webp" alt="" loading="lazy">
+    </div>
+
+    <div class="room26-slide">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/58/23/6f/sugar-52-rooftop-bar.jpg?h=500&s=1&w=900" alt="" loading="lazy">
+    </div>
+
+    <div class="room26-slide">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/b9/2d/74/sunset-view-from-the.jpg?h=800&s=1&w=1400" alt="" loading="lazy">
+    </div>
+
+    <div class="room26-slide">
+      <img src="https://theloftikoyi.com/images/loft/loft_img_9.jpg" alt="" loading="lazy">
+    </div>
+
+    <button class="room26-arrow prev" type="button" aria-label="Previous picture">‹</button>
+    <button class="room26-arrow next" type="button" aria-label="Next picture">›</button>
+
+    <div class="room26-controls" aria-label="Choose picture">
+      <button class="room26-dot active" type="button" aria-label="Picture 1"></button>
+      <button class="room26-dot" type="button" aria-label="Picture 2"></button>
+      <button class="room26-dot" type="button" aria-label="Picture 3"></button>
+      <button class="room26-dot" type="button" aria-label="Picture 4"></button>
+      <button class="room26-dot" type="button" aria-label="Picture 5"></button>
+      <button class="room26-dot" type="button" aria-label="Picture 6"></button>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -801,6 +951,7 @@ footer a {
 </main>
 
 <script>
+/* SCROLL REVEAL */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
@@ -813,6 +964,134 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => {
   observer.observe(el);
 });
+
+/* PHOTO SLIDESHOW */
+(() => {
+  const slider = document.getElementById('room26Slider');
+  if (!slider) return;
+
+  const slides = [...slider.querySelectorAll('.room26-slide')];
+  const dots = [...slider.querySelectorAll('.room26-dot')];
+  let current = 0;
+  let timer;
+
+  const show = (index) => {
+    current = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) =>
+      slide.classList.toggle('active', i === current)
+    );
+
+    dots.forEach((dot, i) =>
+      dot.classList.toggle('active', i === current)
+    );
+  };
+
+  const restart = () => {
+    clearInterval(timer);
+    timer = setInterval(() => show(current + 1), 4200);
+  };
+
+  slider.querySelector('.prev').addEventListener('click', () => {
+    show(current - 1);
+    restart();
+  });
+
+  slider.querySelector('.next').addEventListener('click', () => {
+    show(current + 1);
+    restart();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      show(i);
+      restart();
+    });
+  });
+
+  let startX = 0;
+
+  slider.addEventListener('touchstart', e => {
+    startX = e.changedTouches[0].clientX;
+  }, {passive:true});
+
+  slider.addEventListener('touchend', e => {
+    const delta = e.changedTouches[0].clientX - startX;
+
+    if (Math.abs(delta) > 45) {
+      show(current + (delta < 0 ? 1 : -1));
+      restart();
+    }
+  }, {passive:true});
+
+  slider.addEventListener('mouseenter', () => clearInterval(timer));
+  slider.addEventListener('mouseleave', restart);
+
+  restart();
+})();
+
+/* DEMO ORGANISER INVITATION CODE GENERATOR */
+(() => {
+  const form = document.getElementById('issueForm');
+  if (!form) return;
+
+  let code = '';
+
+  const makeCode = () => {
+    const characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+
+    return 'R26-' + Array.from(
+      crypto.getRandomValues(new Uint8Array(5)),
+      byte => characters[byte % characters.length]
+    ).join('');
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    code = makeCode();
+
+    document.getElementById('ticketName').textContent =
+      document.getElementById('guestName').value.trim();
+
+    document.getElementById('ticketType').textContent =
+      document.getElementById('guestTicket').value;
+
+    document.getElementById('ticketCode').textContent = code;
+
+    document.getElementById('ticketEmail').textContent =
+      'Invitation email: ' +
+      document.getElementById('guestEmail').value.trim();
+
+    document.getElementById('printTicket').style.display = 'block';
+    document.getElementById('copyInviteCode').style.display = 'block';
+    document.getElementById('printInvite').style.display = 'block';
+
+    document.getElementById('printTicket').scrollIntoView({
+      behavior:'smooth',
+      block:'center'
+    });
+  });
+
+  document.getElementById('copyInviteCode').addEventListener('click', async () => {
+    if (!code) return;
+
+    const button = document.getElementById('copyInviteCode');
+
+    try {
+      await navigator.clipboard.writeText(code);
+      button.textContent = 'CODE COPIED';
+    } catch {
+      button.textContent = 'COPY NOT AVAILABLE — SELECT THE CODE';
+    }
+  });
+
+  document.getElementById('printInvite').addEventListener('click', () => {
+    window.print();
+  });
+})();
 </script>
 
 </body>
