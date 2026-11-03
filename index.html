@@ -6,548 +6,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#faf9f6">
 <title>ROOM 26 PENT HOUSE | Deedee</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#faf9f6;
-  --ink:#20201f;
-  --muted:#85827e;
-  --purple:#a878f3;
-  --yellow:#ffe17c;
-  --mint:#83e6d0;
-  --gold:#b58a38;
-  --gold-light:#f7e5ae;
-  --white:#fff;
-}
-
-* {box-sizing:border-box;margin:0;padding:0}
-html {scroll-behavior:smooth}
-
-body {
-  background:#eeece8;
-  font-family:'DM Sans',sans-serif;
-  color:var(--ink);
-  display:flex;
-  justify-content:center;
-  min-height:100vh;
-}
-
-.phone {
-  width:100%;
-  max-width:430px;
-  min-height:100vh;
-  background:var(--bg);
-  overflow:hidden;
-  position:relative;
-  box-shadow:0 0 50px #00000012;
-}
-
-.topbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px 22px 15px;
-}
-
-.brand {
-  font-weight:900;
-  font-size:14px;
-  letter-spacing:1.5px;
-}
-
-.host {
-  font-size:10px;
-  color:var(--muted);
-  font-weight:700;
-}
-
-.hero {
-  margin:12px 15px;
-  min-height:440px;
-  border-radius:28px;
-  background:#b78af5;
-  position:relative;
-  overflow:hidden;
-  padding:28px 23px;
-  isolation:isolate;
-  animation:appear .9s ease both;
-}
-
-.hero::before {
-  content:"";
-  position:absolute;
-  width:290px;
-  height:290px;
-  border-radius:50%;
-  background:#d6bafa;
-  right:-110px;
-  top:80px;
-  z-index:-1;
-}
-
-.hero::after {
-  content:"";
-  position:absolute;
-  width:190px;
-  height:190px;
-  border-radius:50%;
-  background:#9b6be9;
-  left:-85px;
-  bottom:-65px;
-  z-index:-1;
-}
-
-.eyebrow {
-  font-size:10px;
-  letter-spacing:3px;
-  font-weight:800;
-  text-transform:uppercase;
-}
-
-.hero h1 {
-  font-size:clamp(42px,12vw,58px);
-  line-height:.96;
-  letter-spacing:-3px;
-  font-weight:900;
-  margin-top:22px;
-  max-width:330px;
-  position:relative;
-  z-index:2;
-}
-
-.hero h1 span {
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-weight:700;
-  color:#fff;
-}
-
-.hero-sub {
-  margin-top:17px;
-  font-size:12px;
-  line-height:1.7;
-  max-width:240px;
-  font-weight:600;
-}
-
-.hero-art {
-  position:absolute;
-  right:10px;
-  bottom:38px;
-  width:170px;
-  height:170px;
-  display:grid;
-  place-items:center;
-  animation:float 4s ease-in-out infinite;
-}
-
-.art-circle {
-  width:140px;
-  height:140px;
-  border-radius:45% 55% 50% 50%;
-  background:linear-gradient(135deg,#fff4d1,#ffca68);
-  transform:rotate(-15deg);
-  box-shadow:15px 20px 35px #4a247044;
-  display:grid;
-  place-items:center;
-}
-
-.art-circle span {
-  font-size:83px;
-  transform:rotate(15deg);
-}
-
-.hero-bottom {
-  position:absolute;
-  left:23px;
-  bottom:22px;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:1.5px;
-}
-
-.floating {
-  position:absolute;
-  z-index:3;
-  border-radius:14px;
-  box-shadow:0 12px 25px #00000020;
-  animation:float 3s ease-in-out infinite;
-}
-
-.f1 {
-  background:#ffe17c;
-  width:42px;height:42px;
-  right:24px;top:80px;
-  transform:rotate(20deg);
-}
-
-.f2 {
-  background:#80e9d4;
-  width:27px;height:27px;
-  right:160px;bottom:115px;
-  animation-delay:.7s;
-}
-
-.f3 {
-  background:#fff;
-  width:17px;height:17px;
-  right:37px;top:220px;
-  border-radius:50%;
-  animation-delay:1.2s;
-}
-
-.section {padding:25px 21px}
-
-.section-label {
-  font-size:10px;
-  color:var(--muted);
-  letter-spacing:2px;
-  font-weight:800;
-  text-transform:uppercase;
-  margin-bottom:10px;
-}
-
-.section h2 {
-  font-size:28px;
-  letter-spacing:-1px;
-  line-height:1.15;
-  font-weight:900;
-}
-
-.intro {
-  color:#77736e;
-  font-size:13px;
-  line-height:1.8;
-  margin-top:12px;
-}
-
-.host-card {
-  background:#fff;
-  border-radius:19px;
-  padding:17px;
-  margin-top:20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  box-shadow:0 8px 25px #00000008;
-}
-
-.host-card small {
-  color:var(--muted);
-  font-size:9px;
-  letter-spacing:2px;
-  font-weight:800;
-}
-
-.host-card strong {
-  display:block;
-  margin-top:5px;
-  font-size:19px;
-}
-
-.host-icon {
-  width:48px;height:48px;
-  border-radius:15px;
-  background:#e9dcff;
-  display:grid;
-  place-items:center;
-  font-size:25px;
-}
-
-.pastel-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:19px;
-}
-
-.pastel-card {
-  min-height:140px;
-  border-radius:21px;
-  padding:16px;
-  position:relative;
-  overflow:hidden;
-  transition:.3s;
-}
-
-.pastel-card:hover {transform:translateY(-5px)}
+:root{--bg:#faf9f6;--ink:#20201f;--muted:#85827e;--purple:#a878f3;--yellow:#ffe17c;--mint:#83e6d0;--gold:#b58a38;--gold-light:#f7e5ae;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#eeece8;font-family:'DM Sans',sans-serif;color:var(--ink);display:flex;justify-content:center;min-height:100vh}
+.phone{width:100%;max-width:430px;min-height:100vh;background:var(--bg);overflow:hidden;position:relative;box-shadow:0 0 50px #00000012}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 22px 15px}
+.brand{font-weight:900;font-size:14px;letter-spacing:1.5px}
+.host{font-size:10px;color:var(--muted);font-weight:700}
+.hero{margin:12px 15px;min-height:440px;border-radius:28px;background:#b78af5;position:relative;overflow:hidden;padding:28px 23px;isolation:isolate;animation:appear .9s ease both}
+.hero:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:#d6bafa;right:-110px;top:80px;z-index:-1}
+.hero:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#9b6be9;left:-85px;bottom:-65px;z-index:-1}
+.eyebrow{font-size:10px;letter-spacing:3px;font-weight:800;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,12vw,58px);line-height:.96;letter-spacing:-3px;font-weight:900;margin-top:22px;max-width:330px;position:relative;z-index:2}
+.hero h1 span{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#fff}
+.hero-sub{margin-top:17px;font-size:12px;line-height:1.7;max-width:240px;font-weight:600}
+.hero-art{position:absolute;right:10px;bottom:38px;width:170px;height:170px;display:grid;place-items:center;animation:float 4s ease-in-out infinite}
+.art-circle{width:140px;height:140px;border-radius:45% 55% 50% 50%;background:linear-gradient(135deg,#fff4d1,#ffca68);transform:rotate(-15deg);box-shadow:15px 20px 35px #4a247044;display:grid;place-items:center}
+.art-circle span{font-size:83px;transform:rotate(15deg)}
+.hero-bottom{position:absolute;left:23px;bottom:22px;font-size:10px;font-weight:800;letter-spacing:1.5px}
+.floating{position:absolute;z-index:3;border-radius:14px;box-shadow:0 12px 25px #00000020;animation:float 3s ease-in-out infinite}
+.f1{background:#ffe17c;width:42px;height:42px;right:24px;top:80px;transform:rotate(20deg)}
+.f2{background:#80e9d4;width:27px;height:27px;right:160px;bottom:115px;animation-delay:.7s}
+.f3{background:#fff;width:17px;height:17px;right:37px;top:220px;border-radius:50%;animation-delay:1.2s}
+.section{padding:25px 21px}
+.section-label{font-size:10px;color:var(--muted);letter-spacing:2px;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+.section h2{font-size:28px;letter-spacing:-1px;line-height:1.15;font-weight:900}
+.intro{color:#77736e;font-size:13px;line-height:1.8;margin-top:12px}
+.host-card{background:#fff;border-radius:19px;padding:17px;margin-top:20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 8px 25px #00000008}
+.host-card small{color:var(--muted);font-size:9px;letter-spacing:2px;font-weight:800}
+.host-card strong{display:block;margin-top:5px;font-size:19px}
+.host-icon{width:48px;height:48px;border-radius:15px;background:#e9dcff;display:grid;place-items:center;font-size:25px}
+.pastel-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:19px}
+.pastel-card{min-height:140px;border-radius:21px;padding:16px;position:relative;overflow:hidden;transition:.3s}
+.pastel-card:hover{transform:translateY(-5px)}
 .pastel-card:nth-child(1){background:#ffdf7d}
 .pastel-card:nth-child(2){background:#80e8d2}
 .pastel-card:nth-child(3){background:#d9c2ff}
 .pastel-card:nth-child(4){background:#ffd0c3}
-
-.pastel-card .emoji {
-  font-size:35px;
-  display:block;
-  margin-bottom:17px;
-  filter:drop-shadow(0 7px 5px #00000015);
-}
-
-.pastel-card strong {
-  font-size:13px;
-  display:block;
-}
-
-.pastel-card small {
-  font-size:10px;
-  color:#555;
-}
-
-.price-heading {margin-bottom:17px}
-
-.price-card {
-  background:#fff;
-  border-radius:23px;
-  padding:20px;
-  margin-bottom:13px;
-  box-shadow:0 8px 25px #00000009;
-}
-
-.price-card.standard {border:1px solid #eeeae4}
-
-.price-card.vip {
-  background:linear-gradient(135deg,#29231b,#68502c 55%,#a27a36);
-  color:#fff7df;
-  border:1px solid #c9a85d;
-  box-shadow:0 15px 35px #a7833d30;
-}
-
-.package-top {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.package-top h3 {
-  font-size:18px;
-  font-weight:900;
-}
-
-.package-top span {
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  padding:7px 10px;
-  border-radius:30px;
-  background:#eeeae4;
-  color:#333;
-}
-
-.vip .package-top span {
-  background:linear-gradient(120deg,#f9e9b8,#d3ad5d);
-  color:#382b16;
-}
-
-.price-row {
-  display:flex;
-  justify-content:space-between;
-  margin-top:22px;
-  padding-top:15px;
-  border-top:1px solid #eeeae4;
-}
-
-.vip .price-row {border-color:#ffffff30}
-
-.price-row small {
-  display:block;
-  font-size:10px;
-  opacity:.7;
-  margin-bottom:5px;
-}
-
-.price-row strong {
-  font-size:23px;
-  font-weight:900;
-}
-
-.vip .price-row strong {color:#ffe6a1}
-
-.vip-note {
-  font-size:10px;
-  margin-top:15px;
-  line-height:1.6;
-  color:#f3dfb2;
-}
-
-.feature-list {
-  margin-top:19px;
-  display:grid;
-  gap:10px;
-}
-
-.feature {
-  background:white;
-  padding:14px;
-  border-radius:15px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  font-size:12px;
-  font-weight:700;
-  box-shadow:0 5px 15px #00000006;
-}
-
-.feature i {
-  font-style:normal;
-  font-size:21px;
-}
-
-.notice {
-  background:#fff0e8;
-  border:1px solid #f5d5c7;
-  border-radius:20px;
-  padding:20px;
-  margin-top:15px;
-}
-
-.notice h3 {
-  font-size:16px;
-  margin-bottom:9px;
-}
-
-.notice p {
-  font-size:12px;
-  line-height:1.8;
-  color:#69564e;
-}
-
-.notice strong {color:#a13c28}
-
-.network {
-  background:#e5f8f1;
-  padding:21px;
-  border-radius:22px;
-  margin-top:18px;
-}
-
-.network h3 {
-  font-size:20px;
-  margin-bottom:10px;
-}
-
-.network p {
-  font-size:12px;
-  line-height:1.8;
-  color:#536c62;
-}
-
-.date-card {
-  background:#fff;
-  border-radius:20px;
-  padding:18px;
-  margin-top:17px;
-}
-
-.date-line {
-  display:flex;
-  justify-content:space-between;
-  padding:12px 0;
-  border-bottom:1px solid #f0eeea;
-  font-size:12px;
-}
-
+.pastel-card .emoji{font-size:35px;display:block;margin-bottom:17px;filter:drop-shadow(0 7px 5px #00000015)}
+.pastel-card strong{font-size:13px;display:block}
+.pastel-card small{font-size:10px;color:#555}
+.price-heading{margin-bottom:17px}
+.price-card{background:#fff;border-radius:23px;padding:20px;margin-bottom:13px;box-shadow:0 8px 25px #00000009}
+.price-card.standard{border:1px solid #eeeae4}
+.price-card.vip{background:linear-gradient(135deg,#29231b,#68502c 55%,#a27a36);color:#fff7df;border:1px solid #c9a85d;box-shadow:0 15px 35px #a7833d30}
+.package-top{display:flex;justify-content:space-between;align-items:center}
+.package-top h3{font-size:18px;font-weight:900}
+.package-top span{font-size:9px;font-weight:900;letter-spacing:1.5px;padding:7px 10px;border-radius:30px;background:#eeeae4;color:#333}
+.vip .package-top span{background:linear-gradient(120deg,#f9e9b8,#d3ad5d);color:#382b16}
+.price-row{display:flex;justify-content:space-between;margin-top:22px;padding-top:15px;border-top:1px solid #eeeae4}
+.vip .price-row{border-color:#ffffff30}
+.price-row small{display:block;font-size:10px;opacity:.7;margin-bottom:5px}
+.price-row strong{font-size:23px;font-weight:900}
+.vip .price-row strong{color:#ffe6a1}
+.vip-note{font-size:10px;margin-top:15px;line-height:1.6;color:#f3dfb2}
+.feature-list{margin-top:19px;display:grid;gap:10px}
+.feature{background:white;padding:14px;border-radius:15px;display:flex;gap:12px;align-items:center;font-size:12px;font-weight:700;box-shadow:0 5px 15px #00000006}
+.feature i{font-style:normal;font-size:21px}
+.notice{background:#fff0e8;border:1px solid #f5d5c7;border-radius:20px;padding:20px;margin-top:15px}
+.notice h3{font-size:16px;margin-bottom:9px}
+.notice p{font-size:12px;line-height:1.8;color:#69564e}
+.notice strong{color:#a13c28}
+.network{background:#e5f8f1;padding:21px;border-radius:22px;margin-top:18px}
+.network h3{font-size:20px;margin-bottom:10px}
+.network p{font-size:12px;line-height:1.8;color:#536c62}
+.date-card{background:#fff;border-radius:20px;padding:18px;margin-top:17px}
+.date-line{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f0eeea;font-size:12px}
 .date-line:last-child{border:0}
 .date-line span{color:var(--muted)}
 .date-line strong{font-weight:800}
 .soon{color:#a77a25}
-
-.join {
-  background:#292720;
-  color:white;
-  margin:18px 15px;
-  padding:26px 22px;
-  border-radius:25px;
-  text-align:center;
-}
-
-.join h2 {
-  font-size:26px;
-  letter-spacing:-1px;
-}
-
-.join p {
-  font-size:11px;
-  line-height:1.7;
-  color:#c9c5bb;
-  margin:12px 0 20px;
-}
-
-.btn {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  min-height:49px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:900;
-  font-size:12px;
-  margin-top:10px;
-  transition:.25s;
-}
-
-.btn:hover {transform:scale(.98)}
-.btn-gold {background:linear-gradient(120deg,#ffe9ac,#c39a48);color:#342713}
-.btn-white {background:white;color:#24231f}
-.btn-green {background:#25d366;color:#fff}
-
-footer {
-  text-align:center;
-  padding:28px 20px 38px;
-}
-
-footer h2 {
-  font-family:'Playfair Display',serif;
-  font-size:22px;
-}
-
-footer p {
-  color:var(--muted);
-  font-size:10px;
-  margin-top:9px;
-  line-height:1.7;
-}
-
-footer a {
-  color:#8b672b;
-  font-weight:800;
-  text-decoration:none;
-}
-
-.reveal {
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .7s ease,transform .7s ease;
-}
-
-.reveal.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-
-@keyframes float {
-  0%,100%{transform:translateY(0) rotate(-5deg)}
-  50%{transform:translateY(-14px) rotate(5deg)}
-}
-
-@keyframes appear {
-  from{opacity:0;transform:scale(.96)}
-  to{opacity:1;transform:scale(1)}
-}
-
-@media(max-width:360px) {
-  .hero h1{font-size:42px}
-  .price-row strong{font-size:19px}
-}
-
-@media(min-width:700px) {
-  .phone{margin:20px auto;border-radius:28px;min-height:auto}
-}
-
-/* PHOTO SLIDESHOW */
+.join{background:#292720;color:white;margin:18px 15px;padding:26px 22px;border-radius:25px;text-align:center}
+.join h2{font-size:26px;letter-spacing:-1px}
+.join p{font-size:11px;line-height:1.7;color:#c9c5bb;margin:12px 0 20px}
+.btn{display:flex;justify-content:center;align-items:center;width:100%;min-height:49px;border-radius:14px;text-decoration:none;font-weight:900;font-size:12px;margin-top:10px;transition:.25s}
+.btn:hover{transform:scale(.98)}
+.btn-gold{background:linear-gradient(120deg,#ffe9ac,#c39a48);color:#342713}
+.btn-white{background:white;color:#24231f}
+.btn-green{background:#25d366;color:#fff}
+footer{text-align:center;padding:28px 20px 38px}
+footer h2{font-family:'Playfair Display',serif;font-size:22px}
+footer p{color:var(--muted);font-size:10px;margin-top:9px;line-height:1.7}
+footer a{color:#8b672b;font-weight:800;text-decoration:none}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-14px) rotate(5deg)}}
+@keyframes appear{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+@media(max-width:360px){.hero h1{font-size:42px}.price-row strong{font-size:19px}}
+@media(min-width:700px){.phone{margin:20px auto;border-radius:28px;min-height:auto}}
 .room26-showcase{padding:12px 15px 18px}
 .room26-slider{position:relative;width:100%;height:270px;border-radius:24px;overflow:hidden;background:#e8e2db;box-shadow:0 12px 28px #00000012;touch-action:pan-y}
 .room26-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease,transform 5s ease;transform:scale(1.045)}
@@ -560,34 +111,10 @@ footer a {
 .room26-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:34px;height:34px;border:1px solid #ffffff70;border-radius:50%;background:#ffffffb8;color:#20201f;font-size:21px;line-height:1;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
 .room26-arrow.prev{left:12px}
 .room26-arrow.next{right:12px}
-
 @media(min-width:700px){.room26-slider{height:320px}}
 @media(prefers-reduced-motion:reduce){.room26-slide{transition:none}}
-
-/* READ-TO-THE-END REMINDER */
-.read-everything {
-  margin:16px 0 18px;
-  padding:14px 15px;
-  border-left:3px solid #b58a38;
-  border-radius:0 12px 12px 0;
-  background:#f7f1e5;
-  color:#5d4a2c;
-  font-size:11px;
-  line-height:1.65;
-  font-weight:800;
-  letter-spacing:.25px;
-}
-
-/* ORGANISER PAYMENT AND PRINT INVITATION */
-.organiser-preview {
-  margin:18px 15px 22px;
-  padding:22px;
-  border:1px solid #e9e2d8;
-  border-radius:24px;
-  background:#fff;
-  box-shadow:0 12px 30px #0000000a;
-}
-
+.read-everything{margin:16px 0 18px;padding:14px 15px;border-left:3px solid #b58a38;border-radius:0 12px 12px 0;background:#f7f1e5;color:#5d4a2c;font-size:11px;line-height:1.65;font-weight:800;letter-spacing:.25px}
+.organiser-preview{margin:18px 15px 22px;padding:22px;border:1px solid #e9e2d8;border-radius:24px;background:#fff;box-shadow:0 12px 30px #0000000a}
 .organiser-preview .section-label{color:#9b793b}
 .organiser-preview h2{font-family:'Playfair Display',serif;font-size:27px;line-height:1.15;margin:8px 0 10px}
 .organiser-preview p{font-size:13px;line-height:1.65;color:#77716a;margin-bottom:14px}
@@ -606,20 +133,37 @@ footer a {
 .organiser-preview .ticket-code{display:inline-block;background:#20201f;color:#fff;padding:10px 14px;border-radius:9px;letter-spacing:2px;font-weight:900;margin:10px 0}
 .organiser-preview .ticket-note{font-size:10px;color:#766d5d;margin:8px 0 0}
 .organiser-preview .email-note{font-size:11px;color:#8b6c35;margin-top:12px}
-
-@media print {
-  body{background:white!important}
-  .phone{box-shadow:none!important;max-width:none!important}
-  .topbar,.hero,.section,.join,footer,.room26-showcase,.organiser-preview form,.organiser-preview>p,.organiser-preview>.section-label,.organiser-preview>h2{display:none!important}
-  .organiser-preview{display:block!important;border:0!important;box-shadow:none!important;margin:0!important;padding:20px!important}
-  .organiser-preview .ticket{display:block!important;border:2px solid #b58a38!important;max-width:500px;margin:30px auto!important;break-inside:avoid}
-}
+@media print{body{background:white!important}.phone{box-shadow:none!important;max-width:none!important}.topbar,.hero,.section,.join,footer,.room26-showcase,.organiser-preview form,.organiser-preview>p,.organiser-preview>.section-label,.organiser-preview>h2{display:none!important}.organiser-preview{display:block!important;border:0!important;box-shadow:none!important;margin:0!important;padding:20px!important}.organiser-preview .ticket{display:block!important;border:2px solid #b58a38!important;max-width:500px;margin:30px auto!important;break-inside:avoid}}
+.backend-card{margin:18px 15px 22px;padding:22px;border:1px solid #e9e2d8;border-radius:24px;background:#fff;box-shadow:0 12px 30px #0000000a}
+.backend-card h2{font-family:'Playfair Display',serif;font-size:26px;line-height:1.15;margin:8px 0 10px}
+.backend-card p{font-size:12px;line-height:1.7;color:#77716a;margin:0 0 12px}
+.backend-card label{display:block;font-size:11px;font-weight:800;letter-spacing:.5px;margin:12px 0 6px;color:#5e5952}
+.backend-card input,.backend-card select{width:100%;border:1px solid #e4ded5;border-radius:12px;padding:13px 12px;background:#fcfbf9;font:inherit;font-size:14px;color:#252321;outline:none}
+.backend-card button{border:0;border-radius:14px;padding:13px 16px;font:inherit;font-size:12px;font-weight:900;cursor:pointer;width:100%;margin-top:10px}
+.backend-primary{background:#24221f;color:white}
+.backend-secondary{background:#e8f4ed;color:#225c40}
+.backend-gold{background:#f1e7d1;color:#5d4720}
+.backend-status{font-size:12px!important;font-weight:700;margin-top:12px!important;white-space:pre-wrap}
+.backend-hidden{display:none!important}
+.guest-row{border:1px solid #eee8df;border-radius:14px;padding:13px;margin-top:10px;font-size:12px;line-height:1.6}
+.guest-row strong{font-size:14px}
+.guest-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.guest-actions button{font-size:10px;padding:11px 7px}
+#room26Qr{display:flex;justify-content:center;margin:14px auto;min-height:10px}
+#room26Scanner{width:100%;margin-top:12px}
+.room26-ticket{display:none;text-align:center;background:#fffdf7;border:2px dashed #b58a38;border-radius:18px;padding:22px;margin-top:16px}
+.room26-ticket h3{font-family:'Playfair Display',serif;font-size:25px;margin:8px 0}
+.room26-ticket .code{display:inline-block;background:#24221f;color:white;padding:10px 14px;border-radius:9px;letter-spacing:2px;font-weight:900;margin:10px 0}
+@media print{body{background:white!important}.phone{box-shadow:none!important;max-width:none!important}.topbar,.hero,.section,.join,footer,.room26-showcase,#publicRegistration,#organiserLogin,.backend-actions{display:none!important}#organiserDashboard{display:block!important;border:0!important;box-shadow:none!important;margin:0!important}#guestPrintTicket{display:block!important;max-width:500px;margin:30px auto!important}}
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 
 <body>
 <main class="phone">
-
 <header class="topbar">
   <div class="brand">ROOM 26 / PENT HOUSE</div>
   <div class="host">ABUJA · 2026</div>
@@ -627,79 +171,30 @@ footer a {
 
 <section class="hero">
   <div class="eyebrow">THE END-OF-YEAR EXPERIENCE</div>
-
   <h1>ROOM<br>26 <span>PENT</span><br>HOUSE.</h1>
-
-  <p class="hero-sub">
-    Abuja's popular personalities. One unforgettable gathering.
-    A night of connection, celebration and entertainment.
-  </p>
-
-  <div class="hero-art">
-    <div class="art-circle"><span>🥂</span></div>
-  </div>
-
-  <div class="floating f1"></div>
-  <div class="floating f2"></div>
-  <div class="floating f3"></div>
-
+  <p class="hero-sub">Abuja's popular personalities. One unforgettable gathering. A night of connection, celebration and entertainment.</p>
+  <div class="hero-art"><div class="art-circle"><span>🥂</span></div></div>
+  <div class="floating f1"></div><div class="floating f2"></div><div class="floating f3"></div>
   <div class="hero-bottom">HOSTED BY DEEDEE · END OF 2026</div>
 </section>
 
 <section class="section reveal">
   <div class="section-label">THE INVITATION</div>
   <h2>Abuja, this one's different.</h2>
-
-  <div class="read-everything">
-    PLEASE READ THIS INVITATION TO THE VERY END. Important information about tickets, event arrangements, updates and entry is included throughout. Don’t miss any details.
-  </div>
-
-  <p class="intro">
-    An idea to bring together some of Abuja's most popular big boys,
-    beautiful girls, entrepreneurs, creatives and social personalities
-    under one roof for an extraordinary end-of-year experience.
-    Come ready to connect, celebrate, perform and make memories.
-  </p>
-
-  <div class="host-card">
-    <div>
-      <small>YOUR HOST</small>
-      <strong>DEEDEE</strong>
-    </div>
-    <div class="host-icon">👑</div>
-  </div>
+  <div class="read-everything">PLEASE READ THIS INVITATION TO THE VERY END. Important information about tickets, event arrangements, updates and entry is included throughout. Don’t miss any details.</div>
+  <p class="intro">An idea to bring together some of Abuja's most popular big boys, beautiful girls, entrepreneurs, creatives and social personalities under one roof for an extraordinary end-of-year experience. Come ready to connect, celebrate, perform and make memories.</p>
+  <div class="host-card"><div><small>YOUR HOST</small><strong>DEEDEE</strong></div><div class="host-icon">👑</div></div>
 </section>
 
 <section class="section reveal">
   <div class="section-label">THE EXPERIENCE</div>
   <h2>More than just a party.</h2>
-
   <div class="pastel-grid">
-    <div class="pastel-card">
-      <span class="emoji">🍽️</span>
-      <strong>BUFFET</strong>
-      <small>Food and dining experience</small>
-    </div>
-
-    <div class="pastel-card">
-      <span class="emoji">🎮</span>
-      <strong>GAMES</strong>
-      <small>Fun and exciting activities</small>
-    </div>
-
-    <div class="pastel-card">
-      <span class="emoji">🎤</span>
-      <strong>PERFORMANCES</strong>
-      <small>Showcase your talent</small>
-    </div>
-
-    <div class="pastel-card">
-      <span class="emoji">🛡️</span>
-      <strong>SECURITY</strong>
-      <small>Security arrangements</small>
-    </div>
+    <div class="pastel-card"><span class="emoji">🍽️</span><strong>BUFFET</strong><small>Food and dining experience</small></div>
+    <div class="pastel-card"><span class="emoji">🎮</span><strong>GAMES</strong><small>Fun and exciting activities</small></div>
+    <div class="pastel-card"><span class="emoji">🎤</span><strong>PERFORMANCES</strong><small>Showcase your talent</small></div>
+    <div class="pastel-card"><span class="emoji">🛡️</span><strong>SECURITY</strong><small>Security arrangements</small></div>
   </div>
-
   <div class="feature-list">
     <div class="feature"><i>💼</i> Opportunity to showcase your business</div>
     <div class="feature"><i>🤝</i> Meet people and build valuable connections</div>
@@ -711,79 +206,57 @@ footer a {
 <section class="section reveal">
   <div class="section-label">CHOOSE YOUR EXPERIENCE</div>
   <h2 class="price-heading">Your entry. Your access.</h2>
-
   <div class="price-card standard">
-    <div class="package-top">
-      <h3>STANDARD</h3>
-      <span>GENERAL ACCESS</span>
-    </div>
-
+    <div class="package-top"><h3>STANDARD</h3><span>GENERAL ACCESS</span></div>
     <div class="price-row">
       <div><small>LADIES</small><strong>₦20,000</strong></div>
       <div><small>GENTLEMEN</small><strong>₦30,000</strong></div>
     </div>
   </div>
-
   <div class="price-card vip">
-    <div class="package-top">
-      <h3>VIP GOLD</h3>
-      <span>PREMIUM ACCESS</span>
-    </div>
-
+    <div class="package-top"><h3>VIP GOLD</h3><span>PREMIUM ACCESS</span></div>
     <div class="price-row">
       <div><small>VIP LADIES</small><strong>₦30,000</strong></div>
       <div><small>VIP GENTLEMEN</small><strong>₦50,000</strong></div>
     </div>
-
-    <p class="vip-note">
-      Step into the GOLD experience. Premium admission and a special
-      VIP identity for those who want to experience the event differently.
-      Specific VIP benefits will be announced.
-    </p>
+    <p class="vip-note">Step into the GOLD experience. Premium admission and a special VIP identity for those who want to experience the event differently. Specific VIP benefits will be announced.</p>
   </div>
+</section>
+
+<section class="backend-card reveal" id="publicRegistration">
+  <div class="section-label">GUEST REGISTRATION</div>
+  <h2>Reserve your place.</h2>
+  <p>Submit your details to register your interest. Your registration remains pending until the organiser confirms your payment.</p>
+  <form id="guestRegistrationForm">
+    <label for="regName">FULL NAME</label><input id="regName" required maxlength="100" autocomplete="name" placeholder="Your full name">
+    <label for="regEmail">EMAIL ADDRESS</label><input id="regEmail" type="email" required maxlength="180" autocomplete="email" placeholder="you@example.com">
+    <label for="regTicket">TICKET CATEGORY</label>
+    <select id="regTicket" required><option value="">Choose ticket</option><option value="Standard">Standard</option><option value="VIP">VIP Gold</option></select>
+    <label for="regGender">TICKET TYPE</label>
+    <select id="regGender" required><option value="">Choose category</option><option value="Ladies">Ladies</option><option value="Gentlemen">Gentlemen</option></select>
+    <button class="backend-primary" type="submit">SUBMIT REGISTRATION</button>
+  </form>
+  <p id="registrationStatus" class="backend-status" role="status"></p>
 </section>
 
 <section class="section reveal">
   <div class="section-label">ADULTS-ONLY EXPERIENCE</div>
   <h2>Freedom, with respect.</h2>
-
   <div class="notice">
     <h3>Yes, sexual activity is allowed.</h3>
-    <p>
-      This is an adults-only gathering. Consensual sexual activity
-      between adults is permitted in accordance with the event's
-      privacy and venue arrangements. <strong>Consent is compulsory.</strong>
-      No pressure, harassment or unwanted touching. Everyone's
-      personal boundaries must be respected.
-    </p>
+    <p>This is an adults-only gathering. Consensual sexual activity between adults is permitted in accordance with the event's privacy and venue arrangements. <strong>Consent is compulsory.</strong> No pressure, harassment or unwanted touching. Everyone's personal boundaries must be respected.</p>
   </div>
 </section>
 
 <section class="section reveal">
   <div class="section-label">SAVE THE PERIOD</div>
   <h2>Something big is coming.</h2>
-
   <div class="date-card">
-    <div class="date-line">
-      <span>Event period</span>
-      <strong>End of 2026</strong>
-    </div>
-    <div class="date-line">
-      <span>Exact date</span>
-      <strong class="soon">Coming soon</strong>
-    </div>
-    <div class="date-line">
-      <span>Time</span>
-      <strong class="soon">Coming soon</strong>
-    </div>
-    <div class="date-line">
-      <span>Location</span>
-      <strong class="soon">To be announced</strong>
-    </div>
-    <div class="date-line">
-      <span>Host</span>
-      <strong>DEEDEE</strong>
-    </div>
+    <div class="date-line"><span>Event period</span><strong>End of 2026</strong></div>
+    <div class="date-line"><span>Exact date</span><strong class="soon">Coming soon</strong></div>
+    <div class="date-line"><span>Time</span><strong class="soon">Coming soon</strong></div>
+    <div class="date-line"><span>Location</span><strong class="soon">To be announced</strong></div>
+    <div class="date-line"><span>Host</span><strong>DEEDEE</strong></div>
   </div>
 </section>
 
@@ -791,141 +264,67 @@ footer a {
   <div class="network">
     <div class="section-label">BUSINESS & NETWORKING</div>
     <h3>Bring your brand to the room.</h3>
-    <p>
-      ROOM 26 is also an opportunity for business owners, entrepreneurs
-      and creatives to introduce their brands, showcase products,
-      connect with potential customers and meet new partners.
-    </p>
+    <p>ROOM 26 is also an opportunity for business owners, entrepreneurs and creatives to introduce their brands, showcase products, connect with potential customers and meet new partners.</p>
   </div>
 </section>
 
 <section class="join reveal">
-  <div class="section-label" style="color:#d9c28d">
-    YOUR INVITATION STARTS HERE
-  </div>
-
+  <div class="section-label" style="color:#d9c28d">YOUR INVITATION STARTS HERE</div>
   <h2>Be part of ROOM 26.</h2>
-
-  <p>
-    Join the WhatsApp group for updates, announcements,
-    event information and further details.
-  </p>
-
-  <a class="btn btn-green"
-     href="https://chat.whatsapp.com/GhJEXuEHBsZEMjPx1rOVZV?s=cl&p=i&mlu=4&ilr=4&iam=2"
-     target="_blank" rel="noopener">
-     JOIN THE WHATSAPP GROUP ↗
-  </a>
-
-  <a class="btn btn-gold" href="tel:09066547511">
-     CALL FOR ENQUIRIES · 09066547511
-  </a>
-
-  <a class="btn btn-white"
-     href="https://wa.me/2349066547511"
-     target="_blank" rel="noopener">
-     CHAT WITH THE ORGANISER
-  </a>
+  <p>Join the WhatsApp group for updates, announcements, event information and further details.</p>
+  <a class="btn btn-green" href="https://chat.whatsapp.com/GhJEXuEHBsZEMjPx1rOVZV?s=cl&p=i&mlu=4&ilr=4&iam=2" target="_blank" rel="noopener">JOIN THE WHATSAPP GROUP ↗</a>
+  <a class="btn btn-gold" href="tel:09066547511">CALL FOR ENQUIRIES · 09066547511</a>
+  <a class="btn btn-white" href="https://wa.me/2349066547511" target="_blank" rel="noopener">CHAT WITH THE ORGANISER</a>
 </section>
 
-<section class="organiser-preview reveal" id="organiserTools">
-  <div class="section-label">ORGANISER · PAYMENT RECORD</div>
-  <h2>Issue an official invitation.</h2>
-
-  <p>
-    ORGANISER USE ONLY: First verify the guest’s payment outside this website
-    (for example, check the bank alert or transfer receipt). Then enter the
-    guest’s name and email, choose the ticket paid for, and tick the payment
-    confirmation box. Generate the code only after you have confirmed the
-    money has arrived. This preview runs in this browser only; it is not yet
-    connected to a secure organiser account or email service.
-  </p>
-
-  <form id="issueForm">
-    <label for="guestName">GUEST FULL NAME</label>
-    <input id="guestName" type="text" placeholder="Enter guest's full name" required>
-
-    <label for="guestEmail">GUEST EMAIL ADDRESS</label>
-    <input id="guestEmail" type="email" placeholder="name@example.com" required>
-
-    <label for="guestTicket">TICKET CATEGORY</label>
-    <select id="guestTicket" required>
-      <option value="">Select ticket</option>
-      <option value="Standard · Ladies · ₦20,000">Standard · Ladies · ₦20,000</option>
-      <option value="Standard · Gentlemen · ₦30,000">Standard · Gentlemen · ₦30,000</option>
-      <option value="VIP Gold · Ladies · ₦30,000">VIP Gold · Ladies · ₦30,000</option>
-      <option value="VIP Gold · Gentlemen · ₦50,000">VIP Gold · Gentlemen · ₦50,000</option>
-    </select>
-
-    <label class="paid-check">
-      <input id="paymentReceived" type="checkbox" required>
-      I confirm payment has been received separately.
-    </label>
-
-    <button class="generate" type="submit">GENERATE INVITATION CODE</button>
+<section class="backend-card reveal" id="organiserLogin">
+  <div class="section-label">DEEDEE · ORGANISER ACCESS</div>
+  <h2>Organiser sign in.</h2>
+  <p>Private access for the authorised ROOM 26 organiser only.</p>
+  <form id="organiserLoginForm">
+    <label for="organiserEmail">ORGANISER EMAIL</label><input id="organiserEmail" type="email" required autocomplete="username" value="deedeeeventmanagement@gmail.com">
+    <label for="organiserPassword">PASSWORD</label><input id="organiserPassword" type="password" required autocomplete="current-password" placeholder="Your Supabase account password">
+    <button class="backend-primary" type="submit">SIGN IN</button>
   </form>
+  <p id="loginStatus" class="backend-status" role="status"></p>
+</section>
 
-  <div class="ticket" id="printTicket" aria-live="polite">
+<section class="backend-card backend-hidden" id="organiserDashboard">
+  <div class="section-label">PRIVATE ORGANISER DASHBOARD</div>
+  <h2>Guest management.</h2>
+  <p id="organiserWelcome">Signed in.</p>
+  <div class="backend-actions">
+    <button class="backend-primary" id="refreshGuests" type="button">REFRESH GUEST LIST</button>
+    <button class="backend-secondary" id="startScanner" type="button">START QR ENTRY SCANNER</button>
+    <button class="backend-gold" id="stopScanner" type="button">STOP SCANNER</button>
+    <button class="backend-gold" id="organiserLogout" type="button">SIGN OUT</button>
+  </div>
+  <p id="dashboardStatus" class="backend-status" role="status"></p>
+  <div id="guestList"></div>
+  <div id="room26Scanner"></div>
+  <div id="scanStatus" class="backend-status" role="status"></div>
+  <div class="room26-ticket" id="guestPrintTicket">
     <small>ROOM 26 / PENT HOUSE · ABUJA 2026</small>
     <h3>OFFICIAL INVITATION</h3>
-    <div class="ticket-name" id="ticketName"></div>
-    <p id="ticketType"></p>
-    <div class="ticket-code" id="ticketCode"></div>
-    <p class="ticket-note">
-      PAYMENT MARKED AS RECEIVED BY ORGANISER · PRESENT THIS INVITATION AT ENTRY
-    </p>
-    <p class="ticket-note" id="ticketEmail"></p>
-  </div>
-
-  <button class="copy-code" id="copyInviteCode" type="button" style="display:none">
-    COPY INVITATION CODE
-  </button>
-
-  <button id="printInvite" type="button"
-    style="display:none;background:#f1e7d1;color:#5d4720">
-    PRINT GUEST INVITATION
-  </button>
-
-  <div class="email-note">
-    The code is generated in this browser using the browser’s secure
-    random-number generator. Copy it into your guest/payment register so
-    you can check it at the door. This demo does not save a central record
-    or send emails yet; secure code lookup and automatic email delivery
-    must be connected before launch.
+    <div id="printGuestName" style="font-size:18px;font-weight:900"></div>
+    <p id="printGuestType"></p>
+    <div class="code" id="printGuestCode"></div>
+    <div id="room26Qr"></div>
+    <p style="font-size:10px;color:#766d5d">Present this invitation at entry. Each code is valid for one entry only.</p>
+    <button class="backend-gold" type="button" onclick="window.print()">PRINT INVITATION</button>
   </div>
 </section>
 
-<!-- PHOTO SLIDESHOW -->
 <section class="room26-showcase" aria-label="Photo slideshow">
   <div class="room26-slider" id="room26Slider">
-
-    <div class="room26-slide active">
-      <img src="https://image-tc.galaxy.tf/wijpeg-ecr9l26jln0tcr5yshghmotpd/dsc00613_standard.jpg?crop=110%2C0%2C1781%2C1336" alt="" fetchpriority="high">
-    </div>
-
-    <div class="room26-slide">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/b9/2d/84/the-bar-view-from-the.jpg?h=-1&s=1&w=1200" alt="" loading="lazy">
-    </div>
-
-    <div class="room26-slide">
-      <img src="https://pub-5bcc3edf34304d04b59dc91e1ad9d2fd.r2.dev/nigeria.tortoisepath.com/uploads/2024/04/13104952/Sugar-52-Rooftop-Pool-Bar-Lagos-Nigeria-TortoisePathcom-9-jpeg.webp" alt="" loading="lazy">
-    </div>
-
-    <div class="room26-slide">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/58/23/6f/sugar-52-rooftop-bar.jpg?h=500&s=1&w=900" alt="" loading="lazy">
-    </div>
-
-    <div class="room26-slide">
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/b9/2d/74/sunset-view-from-the.jpg?h=800&s=1&w=1400" alt="" loading="lazy">
-    </div>
-
-    <div class="room26-slide">
-      <img src="https://theloftikoyi.com/images/loft/loft_img_9.jpg" alt="" loading="lazy">
-    </div>
-
+    <div class="room26-slide active"><img src="https://image-tc.galaxy.tf/wijpeg-ecr9l26jln0tcr5yshghmotpd/dsc00613_standard.jpg?crop=110%2C0%2C1781%2C1336" alt="" fetchpriority="high"></div>
+    <div class="room26-slide"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/b9/2d/84/the-bar-view-from-the.jpg?h=-1&s=1&w=1200" alt="" loading="lazy"></div>
+    <div class="room26-slide"><img src="https://pub-5bcc3edf34304d04b59dc91e1ad9d2fd.r2.dev/nigeria.tortoisepath.com/uploads/2024/04/13104952/Sugar-52-Rooftop-Pool-Bar-Lagos-Nigeria-TortoisePathcom-9-jpeg.webp" alt="" loading="lazy"></div>
+    <div class="room26-slide"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/58/23/6f/sugar-52-rooftop-bar.jpg?h=500&s=1&w=900" alt="" loading="lazy"></div>
+    <div class="room26-slide"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/b9/2d/74/sunset-view-from-the.jpg?h=800&s=1&w=1400" alt="" loading="lazy"></div>
+    <div class="room26-slide"><img src="https://theloftikoyi.com/images/loft/loft_img_9.jpg" alt="" loading="lazy"></div>
     <button class="room26-arrow prev" type="button" aria-label="Previous picture">‹</button>
     <button class="room26-arrow next" type="button" aria-label="Next picture">›</button>
-
     <div class="room26-controls" aria-label="Choose picture">
       <button class="room26-dot active" type="button" aria-label="Picture 1"></button>
       <button class="room26-dot" type="button" aria-label="Picture 2"></button>
@@ -941,158 +340,296 @@ footer a {
   <h2>ROOM 26 PENT HOUSE</h2>
   <p>HOSTED BY DEEDEE</p>
   <p>ABUJA · END OF 2026</p>
-  <p style="margin-top:17px">
-    Where Abuja connects, celebrates and creates memories.
-  </p>
+  <p style="margin-top:17px">Where Abuja connects, celebrates and creates memories.</p>
   <p><a href="tel:09066547511">09066547511</a></p>
   <p style="margin-top:20px">© 2026 ROOM 26 PENT HOUSE</p>
 </footer>
-
 </main>
 
 <script>
-/* SCROLL REVEAL */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
+const ROOM26_SUPABASE_URL='https://exakcuktblibwbkwymjsje.supabase.co';
+const ROOM26_SUPABASE_KEY='sb_publishable_nYcADMFUM5Xvdu4tJo5Phg_ZfbBF1NF';
+const room26Supabase=window.supabase.createClient(ROOM26_SUPABASE_URL,ROOM26_SUPABASE_KEY);
+let room26Scanner=null;
+let lastScannedCode='';
+
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
       entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
-}, {threshold:0.12});
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
-document.querySelectorAll('.reveal').forEach(el => {
-  observer.observe(el);
-});
-
-/* PHOTO SLIDESHOW */
-(() => {
-  const slider = document.getElementById('room26Slider');
-  if (!slider) return;
-
-  const slides = [...slider.querySelectorAll('.room26-slide')];
-  const dots = [...slider.querySelectorAll('.room26-dot')];
-  let current = 0;
-  let timer;
-
-  const show = (index) => {
-    current = (index + slides.length) % slides.length;
-
-    slides.forEach((slide, i) =>
-      slide.classList.toggle('active', i === current)
-    );
-
-    dots.forEach((dot, i) =>
-      dot.classList.toggle('active', i === current)
-    );
+(()=>{
+  const slider=document.getElementById('room26Slider');
+  if(!slider)return;
+  const slides=[...slider.querySelectorAll('.room26-slide')];
+  const dots=[...slider.querySelectorAll('.room26-dot')];
+  let current=0,timer;
+  const show=i=>{
+    current=(i+slides.length)%slides.length;
+    slides.forEach((x,n)=>x.classList.toggle('active',n===current));
+    dots.forEach((x,n)=>x.classList.toggle('active',n===current));
   };
-
-  const restart = () => {
+  const restart=()=>{
     clearInterval(timer);
-    timer = setInterval(() => show(current + 1), 4200);
+    timer=setInterval(()=>show(current+1),4200);
   };
-
-  slider.querySelector('.prev').addEventListener('click', () => {
-    show(current - 1);
-    restart();
-  });
-
-  slider.querySelector('.next').addEventListener('click', () => {
-    show(current + 1);
-    restart();
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      show(i);
-      restart();
-    });
-  });
-
-  let startX = 0;
-
-  slider.addEventListener('touchstart', e => {
-    startX = e.changedTouches[0].clientX;
-  }, {passive:true});
-
-  slider.addEventListener('touchend', e => {
-    const delta = e.changedTouches[0].clientX - startX;
-
-    if (Math.abs(delta) > 45) {
-      show(current + (delta < 0 ? 1 : -1));
-      restart();
-    }
-  }, {passive:true});
-
-  slider.addEventListener('mouseenter', () => clearInterval(timer));
-  slider.addEventListener('mouseleave', restart);
-
+  slider.querySelector('.prev').addEventListener('click',()=>{show(current-1);restart()});
+  slider.querySelector('.next').addEventListener('click',()=>{show(current+1);restart()});
+  dots.forEach((x,i)=>x.addEventListener('click',()=>{show(i);restart()}));
+  let startX=0;
+  slider.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX},{passive:true});
+  slider.addEventListener('touchend',e=>{
+    const d=e.changedTouches[0].clientX-startX;
+    if(Math.abs(d)>45){show(current+(d<0?1:-1));restart()}
+  },{passive:true});
+  slider.addEventListener('mouseenter',()=>clearInterval(timer));
+  slider.addEventListener('mouseleave',restart);
   restart();
 })();
 
-/* DEMO ORGANISER INVITATION CODE GENERATOR */
-(() => {
-  const form = document.getElementById('issueForm');
-  if (!form) return;
+const $=id=>document.getElementById(id);
+const setStatus=(id,msg,isError=false)=>{
+  const el=$(id);
+  if(el){
+    el.textContent=msg;
+    el.style.color=isError?'#a13c28':'#327a5e';
+  }
+};
 
-  let code = '';
-
-  const makeCode = () => {
-    const characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-
-    return 'R26-' + Array.from(
-      crypto.getRandomValues(new Uint8Array(5)),
-      byte => characters[byte % characters.length]
-    ).join('');
+$('guestRegistrationForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const btn=e.currentTarget.querySelector('button');
+  btn.disabled=true;
+  setStatus('registrationStatus','Submitting your registration…');
+  const payload={
+    full_name:$('regName').value.trim(),
+    email:$('regEmail').value.trim(),
+    ticket_type:$('regTicket').value,
+    gender:$('regGender').value
   };
+  const {error}=await room26Supabase.from('guests').insert(payload);
+  btn.disabled=false;
+  if(error){
+    setStatus('registrationStatus','Could not submit: '+error.message,true);
+    return;
+  }
+  e.currentTarget.reset();
+  setStatus('registrationStatus','Registration received. Your payment is still pending until the organiser confirms it.');
+});
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+async function showOrganiser(session){
+  $('organiserLogin').classList.toggle('backend-hidden',!!session);
+  $('organiserDashboard').classList.toggle('backend-hidden',!session);
+  if(session){
+    $('organiserWelcome').textContent='Signed in as '+(session.user.email||'organiser');
+    await loadGuests();
+  }
+}
 
-    if (!form.reportValidity()) return;
-
-    code = makeCode();
-
-    document.getElementById('ticketName').textContent =
-      document.getElementById('guestName').value.trim();
-
-    document.getElementById('ticketType').textContent =
-      document.getElementById('guestTicket').value;
-
-    document.getElementById('ticketCode').textContent = code;
-
-    document.getElementById('ticketEmail').textContent =
-      'Invitation email: ' +
-      document.getElementById('guestEmail').value.trim();
-
-    document.getElementById('printTicket').style.display = 'block';
-    document.getElementById('copyInviteCode').style.display = 'block';
-    document.getElementById('printInvite').style.display = 'block';
-
-    document.getElementById('printTicket').scrollIntoView({
-      behavior:'smooth',
-      block:'center'
-    });
+$('organiserLoginForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const btn=e.currentTarget.querySelector('button');
+  btn.disabled=true;
+  setStatus('loginStatus','Signing in…');
+  const {data,error}=await room26Supabase.auth.signInWithPassword({
+    email:$('organiserEmail').value.trim(),
+    password:$('organiserPassword').value
   });
+  btn.disabled=false;
+  if(error){
+    setStatus('loginStatus','Sign-in failed: '+error.message,true);
+    return;
+  }
+  $('organiserPassword').value='';
+  setStatus('loginStatus','Signed in.');
+  await showOrganiser(data.session);
+});
 
-  document.getElementById('copyInviteCode').addEventListener('click', async () => {
-    if (!code) return;
+room26Supabase.auth.onAuthStateChange((_event,session)=>{
+  setTimeout(()=>showOrganiser(session),0);
+});
+room26Supabase.auth.getSession().then(({data})=>showOrganiser(data.session));
 
-    const button = document.getElementById('copyInviteCode');
+$('organiserLogout').addEventListener('click',async()=>{
+  await stopRoom26Scanner();
+  await room26Supabase.auth.signOut();
+  setStatus('loginStatus','You have signed out.');
+});
 
-    try {
-      await navigator.clipboard.writeText(code);
-      button.textContent = 'CODE COPIED';
-    } catch {
-      button.textContent = 'COPY NOT AVAILABLE — SELECT THE CODE';
+async function loadGuests(){
+  setStatus('dashboardStatus','Loading guest records…');
+  const {data,error}=await room26Supabase
+    .from('guests')
+    .select('id,full_name,email,ticket_type,gender,payment_status,invitation_code,entry_used,created_at')
+    .order('created_at',{ascending:false});
+
+  if(error){
+    setStatus('dashboardStatus','Could not load guests: '+error.message,true);
+    return;
+  }
+
+  $('guestList').innerHTML='';
+  if(!data.length){
+    $('guestList').textContent='No registrations yet.';
+    setStatus('dashboardStatus','Guest list is up to date.');
+    return;
+  }
+
+  data.forEach(g=>{
+    const card=document.createElement('div');
+    card.className='guest-row';
+    const title=document.createElement('strong');
+    title.textContent=g.full_name;
+    const details=document.createElement('div');
+    details.textContent=`${g.email} · ${g.ticket_type} · ${g.gender} · Payment: ${g.payment_status} · Entry used: ${g.entry_used?'Yes':'No'}`;
+    card.append(title,details);
+
+    const actions=document.createElement('div');
+    actions.className='guest-actions';
+
+    if(g.payment_status==='pending'){
+      const confirmBtn=document.createElement('button');
+      confirmBtn.className='backend-secondary';
+      confirmBtn.textContent='CONFIRM PAYMENT';
+      confirmBtn.addEventListener('click',()=>confirmPayment(g.id));
+      actions.append(confirmBtn);
     }
+
+    if(g.payment_status==='confirmed'&&!g.invitation_code){
+      const issue=document.createElement('button');
+      issue.className='backend-primary';
+      issue.textContent='ISSUE INVITATION';
+      issue.addEventListener('click',()=>issueInvitation(g.id));
+      actions.append(issue);
+    }
+
+    if(g.invitation_code){
+      const print=document.createElement('button');
+      print.className='backend-gold';
+      print.textContent='VIEW / PRINT TICKET';
+      print.addEventListener('click',()=>showTicket(g));
+      actions.append(print);
+
+      const copy=document.createElement('button');
+      copy.className='backend-secondary';
+      copy.textContent='COPY CODE';
+      copy.addEventListener('click',async()=>{
+        await navigator.clipboard.writeText(g.invitation_code);
+        copy.textContent='COPIED';
+      });
+      actions.append(copy);
+    }
+
+    if(actions.children.length)card.append(actions);
+    $('guestList').append(card);
   });
 
-  document.getElementById('printInvite').addEventListener('click', () => {
-    window.print();
+  setStatus('dashboardStatus',`${data.length} guest record(s) loaded.`);
+}
+
+$('refreshGuests').addEventListener('click',loadGuests);
+
+async function confirmPayment(id){
+  if(!confirm('Have you independently verified that this guest’s payment has arrived?'))return;
+  setStatus('dashboardStatus','Confirming payment…');
+  const {data,error}=await room26Supabase.rpc('confirm_guest_payment',{p_guest_id:id});
+  if(error){
+    setStatus('dashboardStatus','Payment confirmation failed: '+error.message,true);
+    return;
+  }
+  setStatus('dashboardStatus','Payment confirmed. Now issue the invitation code.');
+  await loadGuests();
+}
+
+async function issueInvitation(id){
+  setStatus('dashboardStatus','Generating secure invitation code…');
+  const {data,error}=await room26Supabase.rpc('issue_guest_invitation',{p_guest_id:id});
+  if(error){
+    setStatus('dashboardStatus','Invitation failed: '+error.message,true);
+    return;
+  }
+  setStatus('dashboardStatus','Invitation issued: '+data);
+  await loadGuests();
+}
+
+function showTicket(g){
+  $('printGuestName').textContent=g.full_name;
+  $('printGuestType').textContent=`${g.ticket_type==='VIP'?'VIP Gold':'Standard'} · ${g.gender}`;
+  $('printGuestCode').textContent=g.invitation_code;
+  $('room26Qr').innerHTML='';
+  new QRCode($('room26Qr'),{
+    text:g.invitation_code,
+    width:150,
+    height:150,
+    colorDark:'#20201f',
+    colorLight:'#fffdf7',
+    correctLevel:QRCode.CorrectLevel.M
   });
-})();
+  $('guestPrintTicket').style.display='block';
+  $('guestPrintTicket').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+async function handleRoom26Scan(decodedText){
+  const code=String(decodedText||'').trim();
+  if(!code||code===lastScannedCode)return;
+  lastScannedCode=code;
+  setStatus('scanStatus','Checking invitation…');
+
+  const {data,error}=await room26Supabase.rpc('room26_check_in',{p_code:code});
+  if(error){
+    setStatus('scanStatus','Verification error: '+error.message,true);
+    lastScannedCode='';
+    return;
+  }
+
+  const result=Array.isArray(data)?data[0]:data;
+  if(!result){
+    setStatus('scanStatus','Invalid invitation code.',true);
+    return;
+  }
+
+  const ok=result.status==='checked_in';
+  setStatus(
+    'scanStatus',
+    `${result.status.toUpperCase().replaceAll('_',' ')}${result.full_name?' · '+result.full_name:''}${result.ticket_type?' · '+result.ticket_type:''}`,
+    !ok
+  );
+  await loadGuests();
+  setTimeout(()=>{lastScannedCode=''},2500);
+}
+
+$('startScanner').addEventListener('click',async()=>{
+  if(!window.Html5QrcodeScanner){
+    setStatus('scanStatus','QR scanner library did not load. Check your internet connection.',true);
+    return;
+  }
+  if(room26Scanner)return;
+  room26Scanner=new Html5QrcodeScanner(
+    'room26Scanner',
+    {fps:10,qrbox:{width:230,height:230},rememberLastUsedCamera:true},
+    false
+  );
+  room26Scanner.render(handleRoom26Scan,()=>{});
+  setStatus('scanStatus','Allow camera access and scan a guest QR code.');
+});
+
+async function stopRoom26Scanner(){
+  if(room26Scanner){
+    try{await room26Scanner.clear()}catch(e){}
+    room26Scanner=null;
+  }
+  $('room26Scanner').innerHTML='';
+}
+
+$('stopScanner').addEventListener('click',async()=>{
+  await stopRoom26Scanner();
+  setStatus('scanStatus','Scanner stopped.');
+});
 </script>
-
 </body>
 </html>
