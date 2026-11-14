@@ -143,6 +143,17 @@ footer a{color:#8b672b;font-weight:800;text-decoration:none}
 .room26-ticket .code{display:inline-block;background:#24221f;color:white;padding:10px 14px;border-radius:9px;letter-spacing:2px;font-weight:900;margin:10px 0}
 @media(max-width:360px){.room26-logo{width:100px;height:78px}}
 @media print{body{background:white!important}.phone{box-shadow:none!important;max-width:none!important}.topbar,.hero,.section,.join,footer,.room26-showcase,#publicRegistration,#organiserLogin,.backend-actions{display:none!important}#organiserDashboard{display:block!important;border:0!important;box-shadow:none!important;margin:0!important}#guestPrintTicket{display:block!important;max-width:500px;margin:30px auto!important}}
+
+/* ROOM 26 NEWSLETTER ADD-ON — appended without changing existing styles */
+.newsletter-card{margin:18px 0;padding:18px;border:1px solid #e9e2d8;border-radius:20px;background:#fff}
+.newsletter-card h3{font-family:'Playfair Display',serif;font-size:22px;margin:4px 0 8px}
+.newsletter-card p{font-size:11px;line-height:1.65;color:#77716a;margin:0 0 10px}
+.newsletter-card label{display:block;font-size:10px;font-weight:900;letter-spacing:.7px;margin:12px 0 6px;color:#5e5952}
+.newsletter-card input,.newsletter-card textarea{width:100%;border:1px solid #e4ded5;border-radius:12px;padding:12px;background:#fcfbf9;font:inherit;font-size:13px;color:#252321;outline:none}
+.newsletter-card textarea{min-height:130px;resize:vertical;line-height:1.6}
+.newsletter-card button{border:0;border-radius:14px;padding:14px 16px;font:inherit;font-size:11px;font-weight:900;cursor:pointer;width:100%;margin-top:12px;background:linear-gradient(120deg,#ffe9ac,#c39a48);color:#342713}
+.newsletter-card button:disabled{opacity:.55;cursor:wait}
+
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -273,6 +284,20 @@ footer a{color:#8b672b;font-weight:800;text-decoration:none}
     <button class="backend-gold" id="organiserLogout" type="button">SIGN OUT</button>
   </div>
   <p id="dashboardStatus" class="backend-status" role="status"></p>
+  <!-- Added feature: automatic newsletter / announcement sender -->
+  <section class="newsletter-card" id="room26NewsletterPanel">
+    <div class="section-label">EMAIL UPDATES</div>
+    <h3>Send a newsletter.</h3>
+    <p>Write an announcement here and send it automatically to the email addresses of registered ROOM 26 guests.</p>
+    <form id="room26NewsletterForm">
+      <label for="room26NewsSubject">EMAIL SUBJECT</label>
+      <input id="room26NewsSubject" type="text" maxlength="180" required placeholder="ROOM 26 · Important event update">
+      <label for="room26NewsBody">MESSAGE</label>
+      <textarea id="room26NewsBody" maxlength="12000" required placeholder="Write your event announcement here..."></textarea>
+      <button id="room26NewsSend" type="submit">SEND TO REGISTERED GUESTS</button>
+    </form>
+    <p id="room26NewsStatus" class="backend-status" role="status"></p>
+  </section>
   <div id="guestList"></div>
   <div id="room26Scanner"></div>
   <div id="scanStatus" class="backend-status" role="status"></div>
@@ -646,6 +671,36 @@ async function stopRoom26Scanner(){
 $('stopScanner').addEventListener('click',async()=>{
   await stopRoom26Scanner();
   setStatus('scanStatus','Scanner stopped.');
+});
+
+// Added feature: send a newsletter through a secure Supabase Edge Function.
+// The email-provider API key is never stored in this public HTML file.
+$('room26NewsletterForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const form=e.currentTarget;
+  const button=$('room26NewsSend');
+  if(button.disabled)return;
+  const subject=$('room26NewsSubject').value.trim();
+  const message=$('room26NewsBody').value.trim();
+  if(!subject||!message){setStatus('room26NewsStatus','Enter an email subject and message.',true);return;}
+  if(!confirm('Send this email to all registered ROOM 26 guests with an email address?'))return;
+  button.disabled=true;
+  button.textContent='SENDING EMAILS…';
+  setStatus('room26NewsStatus','Sending your announcement. Please keep this page open…');
+  try{
+    const {data,error}=await room26Supabase.functions.invoke('room26-send-newsletter',{
+      body:{subject,message}
+    });
+    if(error)throw error;
+    const sent=Number(data?.sent||0),failed=Number(data?.failed||0),total=Number(data?.total||0);
+    setStatus('room26NewsStatus',`Finished. ${sent} email(s) sent, ${failed} failed, from ${total} registered guest record(s).`+(failed?' Check the Supabase function logs for delivery errors.':''),failed>0);
+    if(sent>0)form.reset();
+  }catch(error){
+    setStatus('room26NewsStatus','Could not send: '+(error.message||'Check the Edge Function setup and try again.'),true);
+  }finally{
+    button.disabled=false;
+    button.textContent='SEND TO REGISTERED GUESTS';
+  }
 });
 </script>
 </body>
